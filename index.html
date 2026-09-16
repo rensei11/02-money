@@ -8,13 +8,14 @@
 :root{
   --bg:#f4f6f8;--panel:#fff;--line:#d6dce2;--head:#20262d;--text:#1d2329;
   --muted:#606a74;--section:#e8edf2;--link:#0b57d0;--green:#18794e;--blue:#2f6fda;
-  --red:#b42318;--yellow:#fff8df;--past:#f7f8f9;--low:#fafafa
+  --red:#b42318;--received:#fff2b8;--planned:#e8f4ff;--ignored:#f0f1f2;--past:#f7f8f9;--low:#fafafa
 }
 *{box-sizing:border-box}
 body{margin:0;background:var(--bg);color:var(--text);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Yu Gothic UI","Meiryo",sans-serif;line-height:1.55}
 .wrap{max-width:1320px;margin:0 auto;padding:18px}
 .top{display:flex;justify-content:space-between;gap:12px;align-items:flex-start;flex-wrap:wrap}
 h1{font-size:22px;margin:0 0 4px}.meta{font-size:13px;color:var(--muted);margin:0 0 12px}.status{font-size:12px;color:var(--muted)}
+.toolbar{display:flex;gap:8px;align-items:center;flex-wrap:wrap;margin-bottom:8px}.toolbar button{border:1px solid #aeb7c0;background:#fff;border-radius:7px;padding:6px 10px;font:inherit;font-size:12px;cursor:pointer}.toolbar button:hover{background:#f2f4f6}.help{font-size:12px;color:var(--muted);margin:0 0 10px}
 .table-wrap{background:var(--panel);border:1px solid var(--line);border-radius:10px;overflow:auto;box-shadow:0 1px 4px rgba(0,0,0,.04)}
 table{width:100%;border-collapse:collapse;table-layout:fixed;min-width:900px}
 col.date{width:16%}col.event{width:31%}col.benefit{width:34%}col.note{width:19%}
@@ -22,10 +23,12 @@ thead th{position:sticky;top:0;z-index:2;background:var(--head);color:#fff;text-
 tbody td{vertical-align:top;padding:10px 12px;border-top:1px solid var(--line);border-right:1px solid var(--line);font-size:14px}
 tbody td:last-child,thead th:last-child{border-right:0}.date-head{text-align:center}.date-cell{text-align:center;font-weight:700;white-space:normal;vertical-align:middle}
 .section-row td{background:var(--section);font-weight:700;padding:7px 12px;border-top:2px solid #aeb8c2;color:#27313a}
+.event-top{display:flex;align-items:flex-start;gap:8px}.check-stack{display:flex;flex-direction:column;gap:5px;flex:0 0 17px;min-width:17px;padding-top:2px}.check-line{display:flex;align-items:center;width:17px;height:17px;margin:0;padding:0;cursor:pointer;font-size:0;line-height:1}.check-line span{display:none}.plan-check,.receive-check{appearance:auto;-webkit-appearance:checkbox;width:16px;height:16px;margin:0;cursor:pointer}.plan-check{accent-color:#2f6fda}.receive-check{accent-color:#c99700}.ignore-check{appearance:none;-webkit-appearance:none;position:relative;width:16px;height:16px;margin:0;border:1.5px solid #d73a49;border-radius:3px;background:#fff;cursor:pointer}.ignore-check:checked{background:#d73a49;border-color:#d73a49}.ignore-check:checked::after{content:"×";position:absolute;inset:0;display:flex;align-items:center;justify-content:center;color:#fff;font-size:15px;font-weight:800;line-height:1}
 .event-name{font-weight:700;font-size:15px}.event-name a{color:var(--link);text-decoration:none}.event-name a:hover{text-decoration:underline}.media{margin-top:2px;color:var(--muted);font-size:13px}
 .benefit-lines>div+div{margin-top:2px}.format{font-weight:700}.gift{font-weight:700}.condition{color:#343b42}
 .badges{display:flex;flex-wrap:wrap;gap:5px;margin-bottom:5px}.badge{display:inline-block;border-radius:999px;padding:2px 7px;font-size:11px;font-weight:700;background:#eef1f4;color:#49525b}.badge.replay{background:#eef4ff;color:#2458a6}.badge.pending{background:#fff1c2;color:#7a5600}.badge.recheck{background:#fff1c2;color:#7a5600}.badge.all{background:#e8f5ec;color:var(--green)}.badge.first{background:#eaf1ff;color:#2759b5}.badge.lottery{background:#fdecec;color:var(--red)}
-.pending-row td:not(.date-cell){background:var(--yellow)}.past-row td{background:var(--past);color:#626970}.low-row td{background:var(--low);color:#71777d}
+.event-row.planned td:not(.date-cell){background:var(--planned)}.event-row.received td:not(.date-cell){background:var(--received)}.event-row.ignored td:not(.date-cell){background:var(--ignored)}.event-row.ignored td:not(.date-cell),.event-row.ignored td:not(.date-cell) *{color:#9aa0a6!important}.event-row.ignored td:not(.date-cell) a{text-decoration-color:#b8bdc2!important}
+.past-row:not(.planned):not(.received):not(.ignored) td{background:var(--past);color:#626970}.low-row:not(.planned):not(.received):not(.ignored) td{background:var(--low);color:#71777d}
 details{margin-top:3px}summary{cursor:pointer;color:var(--link);font-size:12px;user-select:none}.detail-box{margin-top:5px;padding:7px 8px;background:#f7f8fa;border:1px solid #e1e5e9;border-radius:6px;font-size:12px;color:#4a535c}.detail-line+.detail-line{margin-top:3px}.detail-label{font-weight:700;color:#333;margin-right:5px}
 .loading{padding:28px;text-align:center;color:var(--muted)}.foot{font-size:12px;color:var(--muted);margin:9px 2px 0}
 @media(max-width:700px){.wrap{padding:9px}h1{font-size:18px}table{min-width:820px}tbody td,thead th{padding:8px;font-size:13px}.event-name{font-size:14px}}
@@ -40,6 +43,9 @@ details{margin-top:3px}summary{cursor:pointer;color:var(--link);font-size:12px;u
     </div>
     <div id="status" class="status">読み込み中…</div>
   </div>
+
+  <div class="toolbar"><button id="resetFlagsBtn">チェックを初期化</button></div>
+  <p class="help">左の3段：上＝通常チェック（水色）、中＝金券受領済み（薄い黄色）、下＝対象外・考慮しない（灰色）。状態はこのブラウザに自動保存されます。</p>
 
   <div class="table-wrap">
     <table>
@@ -58,10 +64,17 @@ details{margin-top:3px}summary{cursor:pointer;color:var(--link);font-size:12px;u
   <p class="foot">※ 通常の案件追加・修正は「案件一覧.json」のみ更新します。細かい条件は「詳細」に格納しています。</p>
 </div>
 <script>
+const FLAGS_KEY='money_gift_ledger_2026_flags_v1';
 const tbody=document.getElementById('ledgerBody');
 const status=document.getElementById('status');
+const resetFlagsBtn=document.getElementById('resetFlagsBtn');
+let flags={};
 const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const useful=v=>v!==undefined&&v!==null&&String(v).trim()!==''&&String(v).trim()!=='不明';
+function loadFlags(){try{flags=JSON.parse(localStorage.getItem(FLAGS_KEY)||'{}')}catch(e){flags={}}}
+function saveFlags(){localStorage.setItem(FLAGS_KEY,JSON.stringify(flags));status.textContent='チェック状態を保存しました'}
+function rowKey(x,group){return x.id||`${group}:${x['イベント名']||''}:${x['開催日']||''}`}
+function eventFlag(id){return flags[id]||{planned:false,received:false,ignored:false}}
 
 function dateLabel(value){
   if(!useful(value))return '不明';
@@ -82,9 +95,7 @@ function simpleFormat(v){
   if(s.includes('オフライン')||s.includes('来場'))return 'オフライン';
   return s;
 }
-function shortGiftType(v){
-  return String(v||'').replace('Amazonギフトカード','Amazon').replace('Amazonギフト','Amazon').replace('QUOカードPay','QUOカードPay');
-}
+function shortGiftType(v){return String(v||'').replace('Amazonギフトカード','Amazon').replace('Amazonギフト','Amazon')}
 function giftText(x){
   if(useful(x['特典']))return x['特典'];
   const type=x['特典種類']||'';const amount=x['特典額']||'';
@@ -105,19 +116,18 @@ function rowBadges(x,group){
   if(useful(x['人数'])&&/先着/.test(x['人数']))out.push([x['人数'],'first']);
   return out;
 }
-function detailsHtml(x,group){
-  const shown=new Set(['イベント名','媒体','開催日','形式','特典種類','特典額','特典','付与方式','必要条件','URL','id']);
+function detailsHtml(x){
   const order=['人数','受付状況','申込期限','所要時間','会社メール条件','SMS認証','付与時期','再確認日','状態','備考','理由'];
   const labels={'人数':'人数','受付状況':'受付','申込期限':'申込期限','所要時間':'所要時間','会社メール条件':'メール条件','SMS認証':'SMS認証','付与時期':'付与時期','再確認日':'再確認日','状態':'状態','備考':'補足','理由':'理由'};
   const lines=[];
-  for(const key of order){if(shown.has(key)||!useful(x[key]))continue;lines.push(`<div class="detail-line"><span class="detail-label">${esc(labels[key]||key)}</span>${esc(x[key])}</div>`)}
+  for(const key of order){if(!useful(x[key]))continue;lines.push(`<div class="detail-line"><span class="detail-label">${esc(labels[key]||key)}</span>${esc(x[key])}</div>`)}
   if(!lines.length)return '';
   return `<details><summary>詳細</summary><div class="detail-box">${lines.join('')}</div></details>`;
 }
-function renderEventCell(x){
-  const name=esc(x['イベント名']||'名称不明');const url=x['URL'];
+function renderEventCell(x,id){
+  const name=esc(x['イベント名']||'名称不明');const url=x['URL'];const f=eventFlag(id);
   const title=useful(url)?`<a href="${esc(url)}" target="_blank" rel="noopener">${name}</a>`:name;
-  return `<div class="event-name">${title}</div><div class="media">${esc(x['媒体']||'媒体不明')}</div>`;
+  return `<div class="event-top"><div class="check-stack"><label class="check-line" title="通常チェック"><input class="plan-check" type="checkbox" aria-label="通常チェック" ${f.planned?'checked':''}><span>チェック</span></label><label class="check-line" title="金券受領済み"><input class="receive-check" type="checkbox" aria-label="金券受領済み" ${f.received?'checked':''}><span>受領</span></label><label class="check-line" title="対象外・考慮しない"><input class="ignore-check" type="checkbox" aria-label="対象外・考慮しない" ${f.ignored?'checked':''}><span>×</span></label></div><div><div class="event-name">${title}</div><div class="media">${esc(x['媒体']||'媒体不明')}</div></div></div>`;
 }
 function renderBenefitCell(x){
   const mode=modeText(x);const gift=giftText(x);const giftMode=mode?`${esc(gift)}｜${esc(mode)}`:esc(gift);
@@ -126,18 +136,40 @@ function renderBenefitCell(x){
 }
 function renderNoteCell(x,group){
   const badges=rowBadges(x,group).map(([t,c])=>`<span class="badge ${esc(c)}">${esc(t)}</span>`).join('');
-  return `<div class="badges">${badges}</div>${detailsHtml(x,group)}`;
+  return `<div class="badges">${badges}</div>${detailsHtml(x)}`;
 }
 function renderSection(title,items,groupClass){
   if(!items.length)return '';
   let html=`<tr class="section-row"><td colspan="4">${esc(title)}（${items.length}件）</td></tr>`;
   for(const x of items){
-    html+=`<tr class="${groupClass}"><td class="date-cell">${esc(dateLabel(x['開催日']))}</td><td>${renderEventCell(x)}</td><td>${renderBenefitCell(x)}</td><td>${renderNoteCell(x,title)}</td></tr>`;
+    const id=rowKey(x,title);const f=eventFlag(id);const stateClass=f.planned?' planned':f.received?' received':f.ignored?' ignored':'';
+    html+=`<tr class="event-row ${groupClass}${stateClass}" data-event-id="${esc(encodeURIComponent(id))}"><td class="date-cell">${esc(dateLabel(x['開催日']))}</td><td>${renderEventCell(x,id)}</td><td>${renderBenefitCell(x)}</td><td>${renderNoteCell(x,title)}</td></tr>`;
   }
   return html;
 }
+function applyFlagToRow(row){
+  const id=decodeURIComponent(row.dataset.eventId);const f=eventFlag(id);
+  row.classList.toggle('planned',!!f.planned);row.classList.toggle('received',!!f.received);row.classList.toggle('ignored',!!f.ignored);
+}
+tbody.addEventListener('change',e=>{
+  if(!e.target.matches('.plan-check,.receive-check,.ignore-check'))return;
+  const row=e.target.closest('.event-row');if(!row)return;
+  const id=decodeURIComponent(row.dataset.eventId);const f=eventFlag(id);
+  if(e.target.classList.contains('plan-check')){
+    f.planned=e.target.checked;if(f.planned){f.received=false;f.ignored=false}
+  }else if(e.target.classList.contains('receive-check')){
+    f.received=e.target.checked;if(f.received){f.planned=false;f.ignored=false}
+  }else{
+    f.ignored=e.target.checked;if(f.ignored){f.planned=false;f.received=false}
+  }
+  flags[id]=f;
+  row.querySelector('.plan-check').checked=!!f.planned;row.querySelector('.receive-check').checked=!!f.received;row.querySelector('.ignore-check').checked=!!f.ignored;
+  applyFlagToRow(row);saveFlags();
+});
+resetFlagsBtn.onclick=()=>{if(!confirm('すべてのチェックと受領状態、×を初期化しますか？'))return;flags={};localStorage.removeItem(FLAGS_KEY);document.querySelectorAll('.event-row').forEach(row=>{row.classList.remove('planned','received','ignored');row.querySelectorAll('input[type="checkbox"]').forEach(c=>c.checked=false)});status.textContent='チェックを初期化しました'};
 (async()=>{
   try{
+    loadFlags();
     const r=await fetch(`案件一覧.json?v=${Date.now()}`,{cache:'no-store'});if(!r.ok)throw new Error(`HTTP ${r.status}`);const data=await r.json();
     const current=data['現在受付中・要確認']||[],pending=data['未受領ギフト']||[],past=data['過去に確認済み']||[],low=data['対象外・低優先']||[];
     tbody.innerHTML=renderSection('現在受付中・要確認',current,'current-row')+renderSection('未受領ギフト',pending,'pending-row')+renderSection('過去に確認済み',past,'past-row')+renderSection('対象外・低優先',low,'low-row');
