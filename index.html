@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>金券・デジタルギフト案件一覧</title>
+  <style>
+    :root{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Yu Gothic UI","Meiryo",sans-serif;color:#202124;background:#f6f7f9}
+    *{box-sizing:border-box}
+    body{margin:0}
+    header{background:#fff;border-bottom:1px solid #ddd;padding:18px 14px;position:sticky;top:0;z-index:2}
+    h1{font-size:22px;margin:0 0 6px}
+    .sub{font-size:13px;color:#666}
+    main{max-width:1100px;margin:0 auto;padding:16px}
+    .summary{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px;margin-bottom:18px}
+    .stat{background:#fff;border:1px solid #ddd;border-radius:10px;padding:12px}
+    .stat b{display:block;font-size:24px;margin-top:4px}
+    section{margin:22px 0}
+    h2{font-size:19px;margin:0 0 10px}
+    .grid{display:grid;gap:10px}
+    .card{background:#fff;border:1px solid #ddd;border-radius:10px;padding:13px}
+    .title{font-size:17px;font-weight:700;margin-bottom:8px}
+    .tags{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:8px}
+    .tag{font-size:12px;border-radius:999px;background:#eef1f4;padding:4px 8px}
+    .tag.all{background:#e6f4ea}
+    .tag.first{background:#e8f0fe}
+    .tag.lottery{background:#fce8e6}
+    dl{display:grid;grid-template-columns:120px 1fr;gap:4px 10px;margin:0;font-size:14px}
+    dt{color:#666}
+    dd{margin:0;overflow-wrap:anywhere}
+    a{color:#065fd4}
+    .note{margin-top:8px;padding-top:8px;border-top:1px solid #eee;font-size:13px;line-height:1.6}
+    .error{background:#fff3cd;border:1px solid #ffe69c;border-radius:8px;padding:12px}
+    @media(max-width:720px){
+      .summary{grid-template-columns:repeat(2,1fr)}
+      dl{grid-template-columns:92px 1fr}
+      h1{font-size:19px}
+    }
+  </style>
+</head>
+<body>
+<header>
+  <h1>金券・デジタルギフト案件一覧</h1>
+  <div class="sub" id="updated">読み込み中…</div>
+</header>
+<main>
+  <div class="summary" id="summary"></div>
+  <div id="content"></div>
+</main>
+<script>
+const el=(name,cls,text)=>{const e=document.createElement(name);if(cls)e.className=cls;if(text!==undefined)e.textContent=text;return e};
+function val(v){return (v===undefined||v===null||v==='')?'—':String(v)}
+function addRow(dl,label,value){const dt=el('dt','',label),dd=el('dd',''); if(label==='URL'&&value){const a=el('a','',value);a.href=value;a.target='_blank';a.rel='noopener';dd.appendChild(a)}else dd.textContent=val(value);dl.append(dt,dd)}
+function badgeClass(v){if(v==='全員')return'all';if(v==='先着')return'first';if(v==='抽選')return'lottery';return''}
+function currentCard(x){
+  const c=el('article','card');c.appendChild(el('div','title',x['イベント名']));
+  const tags=el('div','tags');
+  [['付与方式',x['付与方式']],['特典',x['特典額']||x['特典種類']],['受付',x['受付状況']]].forEach(([k,v])=>{if(v){const t=el('span','tag '+(k==='付与方式'?badgeClass(v):''),v);tags.appendChild(t)}});
+  c.appendChild(tags);
+  const dl=el('dl');
+  addRow(dl,'媒体',x['媒体']);addRow(dl,'開催日',x['開催日']);addRow(dl,'形式',x['形式']);addRow(dl,'特典',x['特典種類']);addRow(dl,'金額',x['特典額']);addRow(dl,'条件',x['必要条件']);addRow(dl,'所要時間',x['所要時間']);addRow(dl,'会社メール',x['会社メール条件']);addRow(dl,'SMS認証',x['SMS認証']);addRow(dl,'付与時期',x['付与時期']);addRow(dl,'再確認日',x['再確認日']);if(x['URL'])addRow(dl,'URL',x['URL']);c.appendChild(dl);
+  if(x['備考'])c.appendChild(el('div','note',x['備考']));return c;
+}
+function simpleCard(x,type){
+  const c=el('article','card');c.appendChild(el('div','title',x['イベント名']));const dl=el('dl');
+  if(type==='past'){addRow(dl,'媒体',x['媒体']);addRow(dl,'特典',x['特典']);addRow(dl,'方式',x['付与方式']);}
+  if(type==='pending'){addRow(dl,'媒体',x['媒体']);addRow(dl,'特典',x['特典']);addRow(dl,'状態',x['状態']);}
+  if(type==='low'){addRow(dl,'理由',x['理由']);}
+  c.appendChild(dl);if(x['備考'])c.appendChild(el('div','note',x['備考']));return c;
+}
+function section(title,items,renderer){const s=el('section');s.appendChild(el('h2','',title+'（'+items.length+'件）'));const g=el('div','grid');items.forEach(x=>g.appendChild(renderer(x)));s.appendChild(g);return s}
+fetch('./案件一覧.json?ts='+Date.now()).then(r=>{if(!r.ok)throw new Error('データを読み込めませんでした');return r.json()}).then(data=>{
+  document.getElementById('updated').textContent='データ更新日：'+val(data['更新日']);
+  const cur=data['現在受付中・要確認']||[],past=data['過去に確認済み']||[],pending=data['未受領ギフト']||[],low=data['対象外・低優先']||[];
+  const summary=document.getElementById('summary');[['現在・要確認',cur.length],['過去確認済み',past.length],['未受領',pending.length],['対象外・低優先',low.length]].forEach(([n,v])=>{const d=el('div','stat');d.append(el('span','',n),el('b','',v));summary.appendChild(d)});
+  const content=document.getElementById('content');
+  content.appendChild(section('現在受付中・要確認',cur,currentCard));
+  content.appendChild(section('未受領ギフト',pending,x=>simpleCard(x,'pending')));
+  content.appendChild(section('過去に確認済み',past,x=>simpleCard(x,'past')));
+  content.appendChild(section('対象外・低優先',low,x=>simpleCard(x,'low')));
+}).catch(err=>{const d=el('div','error','案件一覧.json の読み込みに失敗しました。'+err.message);document.getElementById('content').appendChild(d);document.getElementById('updated').textContent='読み込み失敗';});
+</script>
+</body>
+</html>
