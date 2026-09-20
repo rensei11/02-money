@@ -30,7 +30,7 @@ Amazonギフトカード、QUOカードPay、えらべるPay、giftee、Visaギ�
 
 GitHub Pagesを有効にすると、次のURLで公開する想定です。
 
-`https://rensei11.github.io/2-money/`
+`https://rensei11.github.io/02-money/`
 
 ## 注意
 
