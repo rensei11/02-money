@@ -1,5 +1,5 @@
 {
-  "dataVersion": "2026-10-15-money-import-28",
+  "dataVersion": "2026-10-15-money-copy-offline-4",
   "year": 2026,
   "events": [
     {
@@ -20,6 +20,130 @@
       "nightText": "区分：現在受付中・要確認\n日程原文：2026-09-18\n形式：オフライン\n受付状況：要確認\n所要時間：不明\n会社メール条件：不明\nSMS認証：不明\n付与時期：不明\n備考：名古屋開催。",
       "attendanceStatus": "",
       "visitDates": []
+    },
+    {
+      "id": "xls-x-5d9bf2acf2f6",
+      "date": "2026-09-30",
+      "endDate": "2026-10-02",
+      "dateText": "9月30日(水)～10月2日(金)",
+      "name": "産業DX 総合展 2026 夏 東京",
+      "url": "https://www.bizcrew.jp/expo/industrial-dx-tokyo",
+      "venue": "東京ビッグサイト 東7・8ホール",
+      "conditionLines": [
+        "金券特典：Amazonギフトカードの発送予定は元台帳記録にあり（受領済みかは未確認）",
+        "名前コード：白川 直人"
+      ],
+      "rating": "",
+      "nightTime": "",
+      "nightText": "2026年12月25日(金)までにAmazon ギフトカードのギフトコードを送付",
+      "attendanceStatus": "attended",
+      "visitDates": [
+        "2026-09-30"
+      ],
+      "_kinds": [
+        "gathering"
+      ],
+      "planning": {
+        "planned": true,
+        "interested": false,
+        "ignored": false,
+        "visitDates": [
+          "2026-09-30"
+        ]
+      }
+    },
+    {
+      "id": "xls-x-34310cb50c67",
+      "date": "2026-11-04",
+      "endDate": "2026-11-06",
+      "dateText": "11月4日(水)～11月6日(金)",
+      "name": "DX 総合EXPO 2026 秋 東京",
+      "url": "https://www.bizcrew.jp/expo/access-outline/dx-tokyo",
+      "venue": "幕張メッセ1～3・9・11ホール",
+      "conditionLines": [
+        "金券特典：今回のAmazonギフト等の配布条件は未確認（過去会期の情報と混同しない）",
+        "主催：エバーリッジ（Bizcrew）"
+      ],
+      "rating": "",
+      "nightTime": "11/4・5 各日16:30～",
+      "nightText": "ビズクル祭：11/4・5開催、ソフトドリンク提供（主催者公式で確認）。金券・紹介特典の今会期の確定条件は未確認。",
+      "attendanceStatus": "",
+      "visitDates": [],
+      "_kinds": [
+        "gathering"
+      ],
+      "planning": {
+        "planned": false,
+        "interested": true,
+        "ignored": false,
+        "visitDates": [
+          "2026-11-04",
+          "2026-11-05"
+        ]
+      }
+    },
+    {
+      "id": "xls-x-0283ca63ae18",
+      "date": "2026-12-09",
+      "endDate": "2026-12-10",
+      "dateText": "12月9日(水)～10日(木)",
+      "name": "イプロスAI 産業World",
+      "url": "https://ex.ipros.jp/expo/iprosai-2026-12/",
+      "venue": "東京国際フォーラム",
+      "conditionLines": [
+        "金券特典：相互1,000円分のAmazonギフトカード（元台帳の記録・最新条件は要確認）"
+      ],
+      "rating": "",
+      "nightTime": "",
+      "nightText": "相互1000円のアマギフ",
+      "attendanceStatus": "",
+      "visitDates": [],
+      "_kinds": [
+        "gathering"
+      ],
+      "planning": {
+        "planned": true,
+        "interested": false,
+        "ignored": false,
+        "visitDates": [
+          "2026-12-09",
+          "2026-12-10"
+        ]
+      }
+    },
+    {
+      "id": "evt-iprosai-2027-winter-0127",
+      "date": "2027-01-27",
+      "endDate": "2027-01-29",
+      "dateText": "1月27日(水)～1月29日(金)",
+      "name": "イプロスAI 2027 冬",
+      "url": "https://ex.ipros.jp/expo/iprosai-2027-01/benefits/",
+      "venue": "有明GYM-EX",
+      "conditionLines": [
+        "金券特典：来場特典2,000円＋紹介特典1,000円／人（元台帳の記録）",
+        "【最重要：来場特典】",
+        "10:00～17:00／入場無料（事前登録制）",
+        "来場予定者数10,000人（主催者見込み）",
+        "名前コード：松井 達也"
+      ],
+      "rating": "",
+      "nightTime": "",
+      "nightText": "【①10/13～11/12限定！｜早期来場予約でアマギフ2,000円分進呈】\n★来場登録時、プロモーションコード欄に「IP27W」を記入いただき、\n当日来場いただいた方に【2,000円分のAmazonギフトカード】をプレゼント。\n\n【②お知り合いを1人紹介いただくごとにアマギフ1,000円分進呈】\n★まずはあなたが来場登録をした後、\n「招待したいお知り合いの方」に来場登録をいただく際、\n「招待コード」欄に、「あなたのメールアドレス」を書いてもらうだけでOK！\n来場後、双方に【1,000円分のAmazonギフトカード】をプレゼント。\n2人で2,000円、3人で3,000円、誘った人数に応じて特典がアップします",
+      "attendanceStatus": "",
+      "visitDates": [],
+      "_kinds": [
+        "gathering"
+      ],
+      "planning": {
+        "planned": true,
+        "interested": false,
+        "ignored": false,
+        "visitDates": [
+          "2027-01-27",
+          "2027-01-28",
+          "2027-01-29"
+        ]
+      }
     }
   ]
 }
