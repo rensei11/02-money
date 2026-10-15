@@ -3,44 +3,6 @@
   "year": 2026,
   "events": [
     {
-      "id": "money-import-2026-025",
-      "date": "",
-      "endDate": "",
-      "dateText": "2026 秋",
-      "name": "JAPAN LEADERS SUMMIT 2026 秋 メール限定キャンペーン",
-      "url": "https://event-page.jp/jls",
-      "venue": "オンライン",
-      "conditionLines": [
-        "媒体：不明",
-        "特典：QUOカードPay 1,000円｜全員",
-        "条件：イベント登録＋キャンペーン応募フォーム。同一会社メール"
-      ],
-      "rating": "",
-      "nightTime": "",
-      "nightText": "区分：過去に確認済み\n日程原文：2026 秋\n形式：オンライン申込\n備考：当日参加・視聴・アンケート条件はメール文面に記載なし。",
-      "attendanceStatus": "",
-      "visitDates": []
-    },
-    {
-      "id": "plithus-game-test-2026-10",
-      "date": "",
-      "endDate": "",
-      "dateText": "2026-10予定",
-      "name": "Plithus オンラインゲームテスト",
-      "url": "https://plithus-game.connpass.com/event/401414/",
-      "venue": "オンライン",
-      "conditionLines": [
-        "媒体：Plithus",
-        "特典：Amazonギフト / Visaギフト 1タイトル4,500円相当・最大18,000円｜条件達成",
-        "条件：対象ゲームジャンル累計プレイ250時間以上等"
-      ],
-      "rating": "",
-      "nightTime": "",
-      "nightText": "区分：現在受付中・要確認\n日程原文：2026-10予定\n形式：オンライン\n受付状況：要確認\n所要時間：不明\n会社メール条件：不明\nSMS認証：不明\n付与時期：不明\n備考：最大4タイトル。通常案件より手間はあるが高額。",
-      "attendanceStatus": "",
-      "visitDates": []
-    },
-    {
       "id": "itmedia-digital-strategy-expo-2026-summer-pending",
       "date": "2026-07-08",
       "endDate": "2026-08-05",
@@ -413,6 +375,48 @@
       "visitDates": []
     },
     {
+      "id": "money-uccard-x-follow-repost-2026",
+      "date": "2026-10-01",
+      "endDate": "2026-11-15",
+      "dateText": "10月1日(木)～11月15日(日)",
+      "name": "UCカードグループ公式X 開設記念キャンペーン",
+      "url": "https://www2.uccard.co.jp/uc/lp/thanks_cmp/present_amazon.html",
+      "venue": "オンライン",
+      "conditionLines": [
+        "特典：Amazonギフトカード1,000円｜抽選250名",
+        "条件：公式Xアカウントをフォローし対象投稿をリポスト。応募から当選通知時まで公開アカウント必須"
+      ],
+      "nightTime": "",
+      "nightText": "付与時期：2026年12月上旬以降の当選DMで送付予定\n備考：応募期限11/15。Xアカウント登録無料。抽選型で全員配布ではない。",
+      "rating": "",
+      "attendanceStatus": "",
+      "visitDates": [],
+      "_kinds": [
+        "exhibition"
+      ]
+    },
+    {
+      "id": "money-shueisha-questionnaire-gift-2026-10",
+      "date": "2026-10-01",
+      "endDate": "2026-10-31",
+      "dateText": "10月1日(木)～31日(土)",
+      "name": "集英社オンライン 読者アンケート＆プレゼント2026",
+      "url": "https://shueisha.online/articles/-/258432",
+      "venue": "オンライン",
+      "conditionLines": [
+        "特典：Amazonギフトカード2,000円｜抽選100名",
+        "条件：集英社オンライン無料会員登録＋無料ニュースレター登録＋アンケート回答（1人1回）"
+      ],
+      "nightTime": "",
+      "nightText": "付与時期：当選通知メールは2026年12月から順次予定\n備考：応募期限10/31 23:59。抽選型で全員配布ではない。",
+      "rating": "",
+      "attendanceStatus": "",
+      "visitDates": [],
+      "_kinds": [
+        "exhibition"
+      ]
+    },
+    {
       "id": "security-innovation-conference-2026",
       "date": "2026-10-06",
       "endDate": "",
@@ -460,6 +464,27 @@
       }
     },
     {
+      "id": "money-retail-service-future-conference-2026",
+      "date": "2026-10-20",
+      "endDate": "2026-10-21",
+      "dateText": "10月20日(火)～21日(水)",
+      "name": "小売・サービスの未来会議 2026",
+      "url": "https://www.staff-start.com/lp/vs_Summit_2026.html",
+      "venue": "オンライン",
+      "conditionLines": [
+        "特典：Amazonギフト券2,000円｜抽選30名",
+        "条件：事前参加申込＋10/20または10/21の当日視聴。両日とも1回の申込で参加可"
+      ],
+      "nightTime": "10/20 11:00～16:15・10/21 11:00～15:30",
+      "nightText": "付与時期：当選者への発送時期は未確認\n備考：無料イベント。全員進呈ではなく抽選30名。",
+      "rating": "",
+      "attendanceStatus": "",
+      "visitDates": [],
+      "_kinds": [
+        "exhibition"
+      ]
+    },
+    {
       "id": "backoffice-dxai-online-2026-autumn",
       "date": "2026-10-21",
       "endDate": "",
@@ -496,6 +521,27 @@
       "nightText": "区分：現在受付中・要確認\n日程原文：2026-10-21～2026-10-27\n形式：オンライン / 後日受講\n受付状況：要確認\n所要時間：不明\n会社メール条件：不明\nSMS認証：不明\n付与時期：不明\n備考：オンライン定員500名。会場開催は10/14。",
       "attendanceStatus": "",
       "visitDates": []
+    },
+    {
+      "id": "money-accommodation-dx-2026-1022",
+      "date": "2026-10-22",
+      "endDate": "",
+      "dateText": "10月22日(木)",
+      "name": "宿泊DXカンファレンス2026",
+      "url": "https://proguide.co.jp/accommodationdx/02",
+      "venue": "オンライン",
+      "conditionLines": [
+        "特典：Amazonギフト券500円｜当日視聴＋アンケート回答の条件達成者全員",
+        "条件：ビジネスメールで登録。10/22 14:00申込締切。アーカイブのみの視聴は特典対象外"
+      ],
+      "nightTime": "14:00～",
+      "nightText": "付与時期：未確認\n備考：無料Zoom配信。10/23～29のアーカイブは視聴可能だが、金券は当日視聴＋アンケートが必要。",
+      "rating": "",
+      "attendanceStatus": "",
+      "visitDates": [],
+      "_kinds": [
+        "exhibition"
+      ]
     },
     {
       "id": "money-boxil-expo-finance-2026-autumn",
@@ -551,6 +597,44 @@
         "interested": false,
         "ignored": false
       }
+    },
+    {
+      "id": "money-import-2026-025",
+      "date": "",
+      "endDate": "",
+      "dateText": "2026 秋",
+      "name": "JAPAN LEADERS SUMMIT 2026 秋 メール限定キャンペーン",
+      "url": "https://event-page.jp/jls",
+      "venue": "オンライン",
+      "conditionLines": [
+        "媒体：不明",
+        "特典：QUOカードPay 1,000円｜全員",
+        "条件：イベント登録＋キャンペーン応募フォーム。同一会社メール"
+      ],
+      "rating": "",
+      "nightTime": "",
+      "nightText": "区分：過去に確認済み\n日程原文：2026 秋\n形式：オンライン申込\n備考：当日参加・視聴・アンケート条件はメール文面に記載なし。",
+      "attendanceStatus": "",
+      "visitDates": []
+    },
+    {
+      "id": "plithus-game-test-2026-10",
+      "date": "",
+      "endDate": "",
+      "dateText": "2026-10予定",
+      "name": "Plithus オンラインゲームテスト",
+      "url": "https://plithus-game.connpass.com/event/401414/",
+      "venue": "オンライン",
+      "conditionLines": [
+        "媒体：Plithus",
+        "特典：Amazonギフト / Visaギフト 1タイトル4,500円相当・最大18,000円｜条件達成",
+        "条件：対象ゲームジャンル累計プレイ250時間以上等"
+      ],
+      "rating": "",
+      "nightTime": "",
+      "nightText": "区分：現在受付中・要確認\n日程原文：2026-10予定\n形式：オンライン\n受付状況：要確認\n所要時間：不明\n会社メール条件：不明\nSMS認証：不明\n付与時期：不明\n備考：最大4タイトル。通常案件より手間はあるが高額。",
+      "attendanceStatus": "",
+      "visitDates": []
     }
   ]
 }
