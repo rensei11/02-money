@@ -517,7 +517,12 @@
       "visitDates": [],
       "_kinds": [
         "exhibition"
-      ]
+      ],
+      "planning": {
+        "planned": true,
+        "interested": false,
+        "ignored": false
+      }
     },
     {
       "id": "money-security-blaze-2026-amiya-1111",
