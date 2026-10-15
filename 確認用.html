@@ -1150,7 +1150,7 @@ function row(e,plannedDate='',showDate=true,rowspan=1,isFirstOfDate=true,planned
     (!done&&f.ignored)?'row-ignored':''
   ].filter(Boolean).join(' ');
 
-  const planTools=(!done&&!r&&!editing)?'<label><input class="interest-toggle" type="checkbox" data-id="'+esc(e.id)+'" '+(f.interested&&!f.planned?'checked':'')+'>興味あり</label>':'';
+  const planTools=(!done&&!r&&!editing)?'<label><input class="interest-toggle" type="checkbox" data-id="'+esc(e.id)+'" '+(f.interested&&!f.planned?'checked':'')+'>興味あり</label><label><input class="plan-toggle" type="checkbox" data-id="'+esc(e.id)+'" '+(f.planned?'checked':'')+'>登録</label>':'';
   const tools=planTools?'<div class="event-tools">'+planTools+'</div>':'';
   const dayTools=(!done&&!r&&!editing)?planDayChecks(e):'';
   const plannedDayNo=(plannedDate&&multiDay)?days(e.date,plannedDate).length:0;
