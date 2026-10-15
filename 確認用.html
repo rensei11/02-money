@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>金券台帳（独立確認用）</title>
+<title>金券イベントリスト（独立確認用）</title>
 <style>
 :root{--bg:#f4f6f8;--paper:#fff;--panel:#fff;--line:#d6dce2;--head:#4b5563;--text:#1d2329;--muted:#606a74;--week:#e8edf2;--link:#0b57d0}
 *{box-sizing:border-box}
@@ -85,11 +85,11 @@ th:last-child,td:last-child{border-right:0}
 <div class="wrap">
   <div class="overview-grid">
     <div class="overview-left">
-      <div class="top"><div class="title-status-row"><h1>イベントスケジュール帳</h1><div class="title-meta-stack"><div class="version-info">v0.38</div><div id="loadStatus" class="status">読み込み中</div></div></div><div class="sub">イベント情報・参加予定・参加記録を管理します。</div></div>
+      <div class="top"><div class="title-status-row"><h1>金券イベントリスト</h1><div class="title-meta-stack"><div class="version-info">v0.38</div><div id="loadStatus" class="status">読み込み中</div></div></div><div class="sub">金券イベント・登録予定・参加記録を管理します。</div></div>
       <div class="controls">
         <button data-mode="all" class="active">すべてのイベント <span class="mode-count" data-mode-count="all">0件</span></button>
         <button data-mode="upcoming">今後のイベント <span class="mode-count" data-mode-count="upcoming">0件</span></button>
-        <button data-mode="planned">参加予定 <span class="mode-count" data-mode-count="planned">0件</span></button>
+        <button data-mode="planned">登録予定 <span class="mode-count" data-mode-count="planned">0件</span></button>
         <button data-mode="attended">参加済み <span class="mode-count" data-mode-count="attended">0件</span></button>
         <button id="endProcessBtn" class="end-process-btn" type="button">終了処理 <span id="endProcessCount" class="end-process-count">0</span></button>
         <button id="addEventBtn" class="new-event-btn" type="button">＋ 新しいイベント</button>
@@ -97,17 +97,17 @@ th:last-child,td:last-child{border-right:0}
       </div>
       <div class="subfilters">
         <button type="button" class="kind-filter active" data-kind-filter="both">両方</button>
-        <button type="button" class="kind-filter" data-kind-filter="exhibition">展示会</button>
-        <button type="button" class="kind-filter" data-kind-filter="gathering">懇親会</button>
+        <button type="button" class="kind-filter" data-kind-filter="exhibition">オンライン</button>
+        <button type="button" class="kind-filter" data-kind-filter="gathering">オフライン</button>
         <button id="githubSaveBtn" class="github-save-btn" type="button">未送信なし</button>
         <span id="githubSaveState" class="github-save-state"></span>
-        <label class="hide-ignored-label"><input id="hideIgnoredToggle" type="checkbox">行かないを非表示</label>
+        <label class="hide-ignored-label"><input id="hideIgnoredToggle" type="checkbox">未登録を非表示</label>
         <label class="hide-ignored-label"><input id="highOnlyToggle" type="checkbox">高評価のみ表示</label>
       </div>
       <section class="calendar-panel" aria-label="カレンダー">
         <div class="calendar-left">
-          <div class="calendar-jump"><span class="calendar-title-inline">カレンダー</span><span class="calendar-start-label">表の表示開始月</span><select id="calendarYear" class="calendar-year" aria-label="表の年"></select><div id="monthJump" class="month-jump"></div></div>
-          <div id="calendarMonthsViewport" class="calendar-months-viewport"><div id="calendarMonths" class="calendar-months"></div></div>
+          <div class="calendar-jump"><span class="calendar-title-inline">年月の絞り込み</span><span class="calendar-start-label">表の表示開始月</span><select id="calendarYear" class="calendar-year" aria-label="表の年"></select><div id="monthJump" class="month-jump"></div></div>
+          
         </div>
       </section>
     </div>
@@ -237,11 +237,11 @@ function eventKinds(e){
   return out;
 }
 function kindBadgesHtml(e){
-  return eventKinds(e).map(k=>'<span class="kind-badge '+k+'">'+(k==='exhibition'?'展示会':'懇親会')+'</span>').join('');
+  return eventKinds(e).map(k=>'<span class="kind-badge '+k+'">'+(k==='exhibition'?'オンライン':'オフライン')+'</span>').join('');
 }
 function kindLabel(e){
   const ks=eventKinds(e);
-  return ks.map(k=>k==='exhibition'?'展示会':'懇親会').join('＋');
+  return ks.map(k=>k==='exhibition'?'オンライン':'オフライン').join('＋');
 }
 function passesCommonFilters(e){
   if(kindFilter!=='both'&&!eventKinds(e).includes(kindFilter))return false;
@@ -406,15 +406,12 @@ function reportFlagTools(r){
   return '<div class="report-flag-tools"><label class="report-high-label"><input class="report-high-toggle" type="checkbox" data-report-id="'+esc(r.id)+'" '+(f.good?'checked':'')+'>高評価</label><label class="report-mid-label"><input class="report-mid-toggle" type="checkbox" data-report-id="'+esc(r.id)+'" '+(f.mid?'checked':'')+'>中評価</label><label class="report-low-label"><input class="report-low-toggle" type="checkbox" data-report-id="'+esc(r.id)+'" '+(f.bad?'checked':'')+'>低評価</label></div>';
 }
 function plannedDates(e){
-  const f=flag(e); let x=[];
-  const multiDay=!!(e.endDate&&e.endDate!==e.date);
-  if(multiDay){
-    if(Array.isArray(f.visitDates))x=[...new Set(f.visitDates)].filter(d=>inRange(e,d));
-  }else if(f.planned||f.interested){
-    x=[e.date];
-  }
-  const done=new Set(actualDates(e)),today=todayISO();
-  return x.filter(d=>!done.has(d)&&d>=today).sort();
+  const f=flag(e);
+  if(!f.planned&&!f.interested)return [];
+  const start=String(e.date||''),end=String(e.endDate||e.date||'');
+  if(!/^\d{4}-\d{2}-\d{2}$/.test(start)||end<todayISO())return [];
+  const day=start<todayISO()?todayISO():start;
+  return actualDates(e).includes(day)?[]:[day];
 }
 function dateText(e){
   if(e.dateText)return e.dateText.replace(/\t/g,' ').trim();
@@ -430,21 +427,15 @@ function compactRangeText(e){
   return left+'～'+right;
 }
 function tableDateRangeHtml(e){
+  if(e.dateText)return esc(e.dateText);
+  if(!/^\d{4}-\d{2}-\d{2}$/.test(String(e.date||'')))return '日程未確定';
   const left=endDayLabel(e.date);
   if(!e.endDate||e.endDate===e.date)return esc(left);
   const right=endDayLabel(e.endDate);
   return '<span class="date-range-line">'+esc(left)+'～</span><span class="date-range-line">'+esc(right)+'</span>';
 }
 
-function planDayChecks(e){
-  if(!e.endDate||e.endDate===e.date)return '';
-  const selected=new Set(plannedDates(e));
-  const w=['日','月','火','水','木','金','土'];
-  return '<div class="plan-days">'+days(e.date,e.endDate).map(d=>{
-    const x=new Date(d+'T00:00:00');
-    return '<label><input class="plan-day-toggle" type="checkbox" data-id="'+esc(e.id)+'" data-day="'+esc(d)+'" '+(selected.has(d)?'checked':'')+'>'+x.getDate()+'('+w[x.getDay()]+')</label>';
-  }).join('')+'</div>';
-}
+function planDayChecks(e){return '';} // 金券は日別選択不要
 
 function preRatingHtml(value){
   const t=String(value||'').replace(/^実地評価[：:]?\s*/,'').trim();
@@ -597,8 +588,8 @@ function statusBandCell(e,attendedMode=false,rf=null){
     if(rf?.bad){cls='status-low';title='低評価';}
     else if(rf?.mid){cls='status-mid';title='中評価';}
     else if(rf?.good){cls='status-high';title='高評価';}
-    else if(f.ignored||e.attendanceStatus==='not_attended'){cls='status-off';title='行かない／未参加';}
-    else if(f.planned){cls='status-candidate';title='行く';}
+    else if(f.ignored||e.attendanceStatus==='not_attended'){cls='status-off';title='未登録／未参加';}
+    else if(f.planned){cls='status-candidate';title='登録';}
     else if(f.interested){cls='status-candidate';title='興味あり';}
   }
   return '<td class="status-band-cell '+cls+'"'+(title?' title="'+esc(title)+'"':'')+'></td>';
@@ -620,7 +611,7 @@ function passesListStart(date){
 function todayISO(){
   const d=new Date();return d.getFullYear()+'-'+String(d.getMonth()+1).padStart(2,'0')+'-'+String(d.getDate()).padStart(2,'0');
 }
-function isEndProcessAvailable(e){return String(e.endDate||e.date||'')<todayISO()}
+function isEndProcessAvailable(e){return /^\d{4}-\d{2}-\d{2}$/.test(String(e.date||''))&&String(e.endDate||e.date||'')<todayISO()}
 function needsEndProcessing(e){
   if(!e||String(e.id||'').startsWith('draft-new-'))return false;
   const o=officialEvent(e);
@@ -926,14 +917,14 @@ function openEventEdit(eventId='',createMode=false){
     '<div class="event-edit-note">'+(eventEditCreateMode?'入力後「GitHubへ保存」で新しいイベントを作成します。':'入力中はこのブラウザへ一時保存し、「GitHubへ保存」で正式データへ反映します。')+'</div>'+
     '<div class="event-edit-grid">'+
       '<div class="event-kind-field"><div class="end-label">区分</div><div class="event-kind-options">'+
-        '<label class="event-kind-choice exhibition"><input type="checkbox" name="eventEditKind" value="exhibition" '+(kinds.includes('exhibition')?'checked':'')+'><span>展示会</span></label>'+
-        '<label class="event-kind-choice gathering"><input type="checkbox" name="eventEditKind" value="gathering" '+(kinds.includes('gathering')?'checked':'')+'><span>懇親会</span></label>'+
+        '<label class="event-kind-choice exhibition"><input type="checkbox" name="eventEditKind" value="exhibition" '+(kinds.includes('exhibition')?'checked':'')+'><span>オンライン</span></label>'+
+        '<label class="event-kind-choice gathering"><input type="checkbox" name="eventEditKind" value="gathering" '+(kinds.includes('gathering')?'checked':'')+'><span>オフライン</span></label>'+
       '</div></div>'+
       '<label>開始日<input id="eventEditDate" type="date" value="'+esc(val('date',e.date||''))+'"></label>'+
       '<label>終了日<input id="eventEditEndDate" type="date" value="'+esc(val('endDate',(e.endDate&&e.endDate!==e.date)?e.endDate:''))+'" placeholder="1日開催なら空欄"></label>'+
       '<label class="wide">イベント名<input id="eventEditName" type="text" value="'+esc(val('eventName',e.name||''))+'"></label>'+
       '<label class="wide">URL<input id="eventEditUrl" type="url" value="'+esc(val('url',e.url||''))+'"></label>'+
-      '<label class="wide">会場<input id="eventEditVenue" type="text" value="'+esc(val('venue',e.venue||''))+'"></label>'+
+      '<label class="wide">場所（オンライン／オフライン）<input id="eventEditVenue" type="text" value="'+esc(val('venue',e.venue||''))+'"></label>'+
       '<label class="wide">参加名義<input id="eventEditPerson" type="text" value="'+esc(people)+'"></label>'+
       '<label class="wide">参加条件<textarea id="eventEditConditions">'+esc(val('conditionText',conditionLines(e).join('\n')))+'</textarea></label>'+
       '<label>事前評価（参加前）<select id="eventEditPreRating">'+preRatingOptions.map(v=>'<option value="'+v+'" '+(v===preRating?'selected':'')+'>'+(v||'未選択')+'</option>').join('')+'</select></label>'+
@@ -1124,7 +1115,7 @@ function row(e,plannedDate='',showDate=true,rowspan=1,isFirstOfDate=true,planned
   if(a.length)badges.push('<span class="tag attended">参加 '+esc(fmtDates(a))+'</span>');
   else if(e.attendanceStatus==='attended')badges.push('<span class="tag attended">参加済み（日付未入力）</span>');
   if(candidate){
-    if(p.length)badges.push('<span class="tag planned">'+candidateText+' '+esc(fmtDates(plannedDate?[plannedDate]:p))+'</span>');
+    if(p.length)badges.push('<span class="tag planned">'+candidateText+(multiDay?'':' '+esc(fmtDates(plannedDate?[plannedDate]:p)))+'</span>');
     else if(multiDay)badges.push('<span class="tag planned">'+candidateText+' 未定</span>');
   }
   if(e.attendanceStatus==='not_attended')badges.push('<span class="tag notattended">未参加</span>');
@@ -1143,7 +1134,7 @@ function row(e,plannedDate='',showDate=true,rowspan=1,isFirstOfDate=true,planned
     (!done&&f.ignored)?'row-ignored':''
   ].filter(Boolean).join(' ');
 
-  const planTools=(!done&&!r&&!editing)?'<label><input class="interest-toggle" type="checkbox" data-id="'+esc(e.id)+'" '+(f.interested&&!f.planned?'checked':'')+'>興味あり</label><label><input class="plan-toggle" type="checkbox" data-id="'+esc(e.id)+'" '+(f.planned?'checked':'')+'>行く</label><label><input class="ignore-toggle" type="checkbox" data-id="'+esc(e.id)+'" '+(f.ignored?'checked':'')+'>行かない</label>':'';
+  const planTools=(!done&&!r&&!editing)?'<label><input class="interest-toggle" type="checkbox" data-id="'+esc(e.id)+'" '+(f.interested&&!f.planned?'checked':'')+'>興味あり</label><label><input class="plan-toggle" type="checkbox" data-id="'+esc(e.id)+'" '+(f.planned?'checked':'')+'>登録</label><label><input class="ignore-toggle" type="checkbox" data-id="'+esc(e.id)+'" '+(f.ignored?'checked':'')+'>未登録</label>':'';
   const tools=planTools?'<div class="event-tools">'+planTools+'</div>':'';
   const dayTools=(!done&&!r&&!editing)?planDayChecks(e):'';
   const plannedDayNo=(plannedDate&&multiDay)?days(e.date,plannedDate).length:0;
@@ -1406,13 +1397,13 @@ function buildMonthCard(year,month,map,nav=''){
     if(mode==='all'||mode==='upcoming'){
       const labels=[];
       if(attendedCount)labels.push('参加済み '+attendedCount+'件');
-      if(candidateCount)labels.push('来場候補 '+candidateCount+'件（行く'+goingCount+'・興味あり'+interestedCount+'）');
+      if(candidateCount)labels.push('来場候補 '+candidateCount+'件（登録'+goingCount+'・興味あり'+interestedCount+'）');
       if(eventCount)labels.push('イベント '+eventCount+'件');
       x.title=labels.join(' / ');
     }else if(mode==='attended'){
       x.title='参加済み '+attendedCount+'件';
     }else if(mode==='planned'){
-      x.title='来場候補 '+candidateCount+'件（行く'+goingCount+'・興味あり'+interestedCount+'）';
+      x.title='来場候補 '+candidateCount+'件（登録'+goingCount+'・興味あり'+interestedCount+'）';
     }else{
       x.title='イベント '+eventCount+'件';
     }
@@ -1467,30 +1458,21 @@ function shiftCalendar(dir){
   const d=new Date(calendarBaseYear,calendarBaseMonth-1+(dir*2),1);
   calendarBaseYear=d.getFullYear();calendarBaseMonth=d.getMonth()+1;saveUiState();renderCalendar(dir);
 }
-function renderCalendar(slideDir=0){
-  const months=document.getElementById('calendarMonths'),yearSel=document.getElementById('calendarYear'),jump=document.getElementById('monthJump');
-  const map=calendarMap();months.innerHTML='';months.classList.remove('slide-from-right','slide-from-left');
+function renderCalendar(){
+  const yearSel=document.getElementById('calendarYear'),jump=document.getElementById('monthJump');
+  if(!yearSel||!jump)return;
   const ys=availableYears();
   const shownYear=listStartYear||calendarToday.getFullYear();
   yearSel.innerHTML=ys.map(y=>'<option value="'+y+'" '+(y===shownYear?'selected':'')+'>'+y+'</option>').join('');
   jump.innerHTML='<button type="button" data-month="0" class="'+(!listStartMonth?'active':'')+'">全期間</button>'+Array.from({length:12},(_,i)=>'<button type="button" data-month="'+(i+1)+'" title="'+(i+1)+'月以降を表に表示" class="'+(listStartMonth===i+1?'active':'')+'">'+(i+1)+'月</button>').join('');
   jump.querySelectorAll('button[data-month]').forEach(btn=>{
     btn.onclick=()=>{
-      const m=parseInt(btn.dataset.month,10);
-      const y=parseInt(yearSel.value,10)||calendarToday.getFullYear();
-      setTableStartMonth(y,m);
+      const month=parseInt(btn.dataset.month,10);
+      const year=parseInt(yearSel.value,10)||calendarToday.getFullYear();
+      setTableStartMonth(year,month);
     };
   });
-  for(let off=0;off<2;off++){
-    const d=new Date(calendarBaseYear,calendarBaseMonth-1+off,1);
-    months.appendChild(buildMonthCard(d.getFullYear(),d.getMonth()+1,map,off===0?'prev':'next'));
-  }
-  nextPlanIndex=Math.max(0,nextPlanIndex);renderNextPlannedCard();
-  if(slideDir){
-    void months.offsetWidth;
-    months.classList.add(slideDir>0?'slide-from-right':'slide-from-left');
-    setTimeout(()=>months.classList.remove('slide-from-right','slide-from-left'),320);
-  }
+  renderNextPlannedCard();
 }
 function setCalendarBase(year,month){
   const d=new Date(year,month-1,1);calendarBaseYear=d.getFullYear();calendarBaseMonth=d.getMonth()+1;saveUiState();renderCalendar();
@@ -1717,53 +1699,44 @@ function render(){
   }
 
   if(mode==='planned'){
-    const items=[];
-    for(const e of events){
-      if(!passesCommonFilters(e))continue;
-      const f=flag(e);
-      if(!f.planned&&!f.interested)continue;
-      const ds=plannedDates(e);
-      if(ds.length){
-        for(const d of ds)if(passesListStart(d))items.push({e,d,sortDate:d,unknown:false});
-      }else if(e.endDate&&e.endDate!==e.date&&(e.endDate||e.date)>=todayISO()&&passesListStart(e.endDate||e.date)){
-        items.push({e,d:'',sortDate:e.date,unknown:true});
-      }
-    }
-    items.sort((a,b)=>a.sortDate.localeCompare(b.sortDate)||Number(a.unknown)-Number(b.unknown)||compareVenue(a.e,b.e));
-    let html='',month='',week='',i=0;
-    while(i<items.length){
-      const sortDate=items[i].sortDate,m=sortDate.slice(0,7),w=weekKey(sortDate);
+    const today=todayISO();
+    const list=events.slice().filter(e=>passesCommonFilters(e)&&(flag(e).planned||flag(e).interested)&&String(e.endDate||e.date||'')>=today&&passesListStart(e.date));
+    list.sort((a,b)=>String(a.date).localeCompare(String(b.date))||compareVenue(a,b));
+    let html='',month='',week='';
+    for(const e of list){
+      const d=e.date,m=d.slice(0,7),w=weekKey(d);
       if(m!==month){
         const [y,mm]=m.split('-');
         html+='<tr class="month" data-month="'+esc(m)+'"><td colspan="5">'+esc(y)+'年'+Number(mm)+'月</td></tr>';
         month=m;week='';
       }
       if(w!==week){
-        html+='<tr class="week"><td colspan="5">'+esc(weekLabel(sortDate))+'</td></tr>';
+        html+='<tr class="week"><td colspan="5">'+esc(weekLabel(d))+'</td></tr>';
         week=w;
       }
-      if(items[i].unknown){
-        html+=row(items[i].e,'',true,1,true,true);
-        i++;
-        continue;
-      }
-      const d=items[i].d,same=[];
-      while(i<items.length&&!items[i].unknown&&items[i].d===d){same.push(items[i]);i++;}
-      same.forEach((x,idx)=>{html+=row(x.e,d,idx===0,same.length,idx===0,false);});
+      html+=row(e);
     }
-    document.getElementById('body').innerHTML=html||'<tr><td colspan="5" class="empty">参加予定はありません</td></tr>';
+    document.getElementById('body').innerHTML=html||'<tr><td colspan="5" class="empty">登録予定はありません</td></tr>';
     applyContentEditable();selected=null;updateEditButtons();
-    document.getElementById('status').textContent=items.length+'件';
+    document.getElementById('status').textContent=list.length+'件';
     renderCalendar();
     return;
   }
 
   let list=events.slice().filter(e=>passesCommonFilters(e)&&passesHighOnly(e,'all')&&passesListStart(e.date));
-  list.sort((a,b)=>a.date.localeCompare(b.date)||compareVenue(a,b));
+  list.sort((a,b)=>(a.date||'9999').localeCompare(b.date||'9999')||compareVenue(a,b));
 
   let html='',month='',week='';
   for(const e of list){
     const d=e.date,m=d.slice(0,7),w=weekKey(d);
+    if(!/^\d{4}-\d{2}-\d{2}$/.test(String(d||''))){
+      if(month!=='undated'){
+        html+='<tr class="month"><td colspan="5">日程未確定</td></tr>';
+        month='undated';week='';
+      }
+      html+=row(e);
+      continue;
+    }
     if(m!==month){
       const [y,mm]=m.split('-');
       html+='<tr class="month" data-month="'+esc(m)+'"><td colspan="5">'+esc(y)+'年'+Number(mm)+'月</td></tr>';
