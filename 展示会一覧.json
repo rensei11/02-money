@@ -546,25 +546,6 @@
         "interested": false,
         "ignored": false
       }
-    },
-    {
-      "id": "money-import-2026-028",
-      "date": "2026-11-30",
-      "endDate": "",
-      "dateText": "～2026-11-30",
-      "name": "ITセレクト IT製品比較応援キャンペーン",
-      "url": "https://www.itmedia.co.jp/itselect/article/news/10331/",
-      "venue": "オンライン",
-      "conditionLines": [
-        "媒体：ITmedia ITセレクト",
-        "特典：Amazonギフトカード500円｜全員",
-        "条件：資料請求＋電話アンケート"
-      ],
-      "rating": "",
-      "nightTime": "",
-      "nightText": "区分：対象外・低優先\n日程原文：～2026-11-30\n形式：オンライン＋電話\n理由：電話アンケート必須のため低優先。",
-      "attendanceStatus": "",
-      "visitDates": []
     }
   ]
 }
