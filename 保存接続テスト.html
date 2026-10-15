@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>金券イベントリスト・保存接続テスト</title>
+<style>
+:root{color-scheme:light}body{font-family:system-ui,-apple-system,"Meiryo",sans-serif;max-width:620px;margin:35px auto;padding:0 18px;color:#18202b;line-height:1.7}
+h1{font-size:1.4rem}main{padding:20px;border:1px solid #ccd3db;border-radius:12px;background:#fff}
+label{display:block;margin:17px 0 5px;font-weight:700}
+input{box-sizing:border-box;width:100%;padding:12px;font-size:17px;border:1px solid #929da9;border-radius:7px}
+button{border:0;border-radius:8px;background:#195caa;color:white;padding:12px 18px;font-size:16px;font-weight:700;cursor:pointer;margin-top:14px}
+button:disabled{background:#8c99a7;cursor:wait}
+small{color:#53616f}#result{margin-top:18px;padding:12px;background:#edf2f6;white-space:pre-line;border-radius:7px;overflow-wrap:anywhere}
+</style>
+</head>
+<body>
+<main>
+<h1>金券イベントリスト・保存接続テスト</h1>
+<p>これは金券台帳だけの接続確認画面です。<strong>元の食事イベント台帳は操作しません。</strong></p>
+<p id="check">保存先を確認しています…</p>
+<label for="key">Cloudflareに登録した金券専用パスワード（EDIT_KEY）</label>
+<input id="key" type="password" autocomplete="off" spellcheck="false" placeholder="登録したパスワードを入力">
+<small>入力した文字列はこの画面に保存せず、金券専用保存プログラムだけに送信します。ChatGPTに送らないでください。</small>
+<div><button type="button" id="start" disabled>保存テストを実行</button></div>
+<div id="result" role="status" aria-live="polite">接続を確認中です。</div>
+</main>
+<script>
+'use strict';
+const WORKER='https://02-money-event-book.aoigiftmiki.workers.dev';
+const ID='money-import-2026-025';
+const check=document.getElementById('check');
+const result=document.getElementById('result');
+const start=document.getElementById('start');
+const input=document.getElementById('key');
+async function verify(){
+  const response=await fetch(WORKER+'/version',{cache:'no-store'});
+  const data=await response.json();
+  if(!response.ok||data.ok!==true||data.targetRepository!=='rensei11/02-money'||data.ledgerId!=='money-only-02')throw new Error('保存先が金券台帳専用と一致しないため中止しました');
+  return data;
+}
+(async()=>{
+  try{await verify();check.textContent='接続先：金券台帳 02-money（照合済み）';result.textContent='パスワードを入力し、「保存テストを実行」を押してください。';start.disabled=false;}
+  catch(e){check.textContent='接続先を確認できません';result.textContent='テストは実行できません：'+String(e.message||e);}
+})();
+start.addEventListener('click',async()=>{
+  const key=input.value;
+  if(!key){result.textContent='Cloudflareへ登録したパスワードを入力してください。';return}
+  start.disabled=true;
+  result.textContent='金券台帳だけを確認しています。画面を閉じずにお待ちください。';
+  try{
+    await verify();
+    const r=await fetch('./展示会一覧.json?savecheck='+Date.now(),{cache:'no-store'});
+    if(!r.ok)throw new Error('金券台帳の公開データを確認できません');
+    const data=await r.json();
+    const event=(data.events||[]).find(x=>x.id===ID);
+    if(!event||event.planning!==undefined)throw new Error('テスト対象の状態が変わったため、安全のため中止しました');
+    const response=await fetch(WORKER+'/save',{
+      method:'POST',
+      headers:{'Content-Type':'application/json','X-Edit-Key':key,'X-Ledger-Id':'money-only-02'},
+      body:JSON.stringify({action:'planning_state',eventId:ID,planning:{}})
+    });
+    const saved=await response.json().catch(()=>({}));
+    if(!response.ok||!saved.ok||saved.status!=='planning_saved'||!saved.commit)throw new Error(saved.error||('保存に失敗しました（HTTP '+response.status+'）'));
+    result.textContent='保存テスト成功。金券台帳 02-money にだけ記録できました。\n検証番号：'+String(saved.commit).slice(0,12)+'\n\nこの画面の成功表示をChatGPTへ伝えてください。パスワードは送らないでください。';
+  }catch(e){result.textContent='保存テスト未成功：'+String(e.message||e)+'\n\nこのエラー文だけをChatGPTへ伝えてください。パスワードは送らないでください。';}
+  finally{input.value='';start.disabled=false;}
+});
+</script>
+</body>
+</html>
