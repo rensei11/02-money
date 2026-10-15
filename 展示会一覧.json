@@ -228,7 +228,12 @@
       "nightTime": "",
       "nightText": "区分：現在受付中・要確認\n日程原文：2026-09-15～2026-10-15\n形式：オンライン / REPLAY\n受付状況：要確認\n所要時間：不明\n会社メール条件：不明\nSMS認証：不明\n付与時期：配信終了後、最大約4週間\n備考：9/4本編終了後、9/15にREPLAY開始。",
       "attendanceStatus": "",
-      "visitDates": []
+      "visitDates": [],
+      "planning": {
+        "planned": true,
+        "interested": false,
+        "ignored": false
+      }
     },
     {
       "id": "money-import-2026-020",
