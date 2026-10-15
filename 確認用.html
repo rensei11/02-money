@@ -328,7 +328,7 @@ async function setInterested(e,checked){
   const f=cloneData(flag(e));
   if(checked){
     f.interested=true;f.planned=false;f.ignored=false;
-    if(e.endDate&&e.endDate!==e.date){if(!Array.isArray(f.visitDates))f.visitDates=[];}else delete f.visitDates;
+    delete f.visitDates; // 金券台帳は日程ごとの予定チェックを保存しない
   }else{
     f.interested=false;if(!f.planned&&Array.isArray(f.visitDates))delete f.visitDates;
   }
@@ -338,7 +338,7 @@ async function setPlan(e,checked){
   const f=cloneData(flag(e));
   if(checked){
     f.ignored=false;f.planned=true;f.interested=false;
-    if(e.endDate&&e.endDate!==e.date){if(!Array.isArray(f.visitDates))f.visitDates=[];}else delete f.visitDates;
+    delete f.visitDates; // 金券台帳は日程ごとの予定チェックを保存しない
   }else{
     f.planned=false;if(!f.interested&&Array.isArray(f.visitDates))delete f.visitDates;
   }
@@ -1109,7 +1109,7 @@ function reportRatingHtml(value){
 function row(e,plannedDate='',showDate=true,rowspan=1,isFirstOfDate=true,plannedUnknown=false){
   const r=reportFor(e), p=plannedDates(e), a=actualDates(e), people=personLines(e), cond=conditionLines(e);
   const f=flag(e),multiDay=!!(e.endDate&&e.endDate!==e.date),candidate=!!(f.planned||f.interested);
-  const candidateText=f.interested?'興味あり':'予定';
+  const candidateText=f.interested?'興味あり':'登録';
   const badges=[];
   badges.push(kindBadgesHtml(e));
   if(a.length)badges.push('<span class="tag attended">参加 '+esc(fmtDates(a))+'</span>');
