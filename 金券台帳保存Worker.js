@@ -117,8 +117,7 @@ async function gh(path,token,options={}){
   const text=await r.text();
   let data=null;try{data=text?JSON.parse(text):null}catch{data=text}
   if(!r.ok){
-    const e=new Error((data&&data.message)||('GitHub API error '+r.status));
-    e.status=r.status===409||r.status===422?409:500;
+    const e=Object.assign(new Error((data&&data.message)||('GitHub API error '+r.status)),{status:r.status===409||r.status===422?409:500});
     throw e;
   }
   return data;
@@ -293,7 +292,7 @@ async function saveUiOperation(d,token){
   if(d.action==='report_flag')return saveReportFlag(d,token);
   if(d.action==='bulk_ui_state')return saveBulkUiState(d,token);
   if(d.action==='bulk_end_process')return saveBulkEndProcess(d,token);
-  const e=new Error('保存操作が不正です');e.status=400;throw e;
+  throw Object.assign(new Error('保存操作が不正です'),{status:400});
 }
 async function saveEventUpsert(d,token){
   const ctx=await beginWrite(token);
@@ -365,7 +364,7 @@ async function saveEventDelete(d,token){
   const ctx=await beginWrite(token);
   const base=await loadBaseFiles(token,ctx.parentSha,true);
   const found=findEventInLedgers(base.gathering,base.exhibition,d.eventId);
-  if(!found.event){const er=new Error('対象イベントが年間台帳に見つかりません');er.status=409;throw er}
+  if(!found.event){throw Object.assign(new Error('対象イベントが年間台帳に見つかりません'),{status:409})}
   const e=JSON.parse(JSON.stringify(found.event));
   removeEventId(base.gathering,e.id);removeEventId(base.exhibition,e.id);
   base.unattended.events=Array.isArray(base.unattended.events)?base.unattended.events.filter(x=>x.id!==e.id):[];
@@ -391,7 +390,7 @@ async function savePlanningState(d,token){
   const ctx=await beginWrite(token);
   const base=await loadBaseFiles(token,ctx.parentSha,false);
   const found=findEventInLedgers(base.gathering,base.exhibition,d.eventId);
-  if(!found.event){const er=new Error('対象イベントが年間台帳に見つかりません');er.status=409;throw er}
+  if(!found.event){throw Object.assign(new Error('対象イベントが年間台帳に見つかりません'),{status:409})}
   const p=normalizePlanning(d.planning);
   if(hasPlanning(p))found.event.planning=p;else delete found.event.planning;
   if(p.ignored){
@@ -408,7 +407,7 @@ async function saveReportFlag(d,token){
   const manifest=(await readJson('実地レポート.json',token,ctx.parentSha)).json;
   const cache=new Map();
   const hit=await findReportPack(d.reportId,manifest,token,ctx.parentSha,cache);
-  if(!hit){const er=new Error('対象実地レポートが見つかりません');er.status=409;throw er}
+  if(!hit){throw Object.assign(new Error('対象実地レポートが見つかりません'),{status:409})}
   const v=String(d.ratingFlag||'');
   if(v)hit.pack.obj.reports[hit.index].ratingFlag=v;else delete hit.pack.obj.reports[hit.index].ratingFlag;
   const saved=await commitJsonMap(new Map([[hit.pack.path,hit.pack.obj]]),'評価補助: '+String(hit.pack.obj.reports[hit.index].name||d.reportId),token,ctx);
@@ -487,7 +486,7 @@ async function saveBulkEndProcess(d,token){
 
   for(const x of d.entries){
     const found=findEventInLedgers(base.gathering,base.exhibition,x.eventId);
-    if(!found.event){const er=new Error('対象イベントが年間台帳に見つかりません: '+x.eventId);er.status=409;throw er}
+    if(!found.event){throw Object.assign(new Error('対象イベントが年間台帳に見つかりません: '+x.eventId),{status:409})}
     const e=found.event,kind=found.kind;
     e.name=String(x.eventName||x.name||e.name).trim();
     e.venue=String(x.venue??e.venue??'').trim();
@@ -602,7 +601,7 @@ async function saveToGitHub(d,token){
   const ledger=ledgerRes.json, unattended=unattRes.json, manifest=manifestRes.json;
   ledger.events=Array.isArray(ledger.events)?ledger.events:[];
   const idx=ledger.events.findIndex(e=>e.id===d.eventId);
-  if(idx<0){const er=new Error('対象イベントが年間台帳に見つかりません');er.status=409;throw er}
+  if(idx<0){throw Object.assign(new Error('対象イベントが年間台帳に見つかりません'),{status:409})}
   const e=ledger.events[idx];
 
   // イベント編集では開催日も年間台帳へ確定
