@@ -277,6 +277,7 @@ function saveReportFlags(){
   refreshGitHubSaveButton();
 }
 async function getGitHubEditKey(force=false){
+  if(!END_PROCESS_API_URL)throw new Error('金券専用Worker未配備のためGitHub保存を停止しています。');
   if(force)localStorage.removeItem(END_EDIT_KEY_KEY);
   let key=localStorage.getItem(END_EDIT_KEY_KEY)||'';
   if(!key){
@@ -838,6 +839,7 @@ function reconcileSavedEndBackups(){
   if(changed)localStorage.setItem(END_BACKUPS_KEY,JSON.stringify(endBackups));
 }
 async function saveEndToGitHub(){
+  if(!END_PROCESS_API_URL){alert('金券専用Worker未配備のためGitHub保存を停止しています。');return;}
   const d=collectEndDraft();if(!d)return;
   if(!d.status){alert('参加した／行っていない のどちらかを選んでください。');return;}
   if(d.status==='attended'&&!d.visitDates.length){alert('実際に行った日を選んでください。');return;}
