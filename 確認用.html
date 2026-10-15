@@ -83,6 +83,9 @@ th:last-child,td:last-child{border-right:0}
 .next-plan-head{display:flex;align-items:center;justify-content:center}
 .next-plan-title{white-space:normal;font-size:16px;overflow-wrap:anywhere}
 .next-plan-item-date{font-size:13px;font-weight:900;color:#315d87;margin:0 0 5px;line-height:1.4}
+.next-plan-item-date-row{display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin-bottom:5px}
+.next-plan-item-date-row .next-plan-item-date{margin:0}
+.next-plan-item-head .next-plan-name{margin-left:1ch}
 </style>
 </head>
 <body>
@@ -124,7 +127,7 @@ th:last-child,td:last-child{border-right:0}
       <tbody id="body"><tr><td colspan="5" class="empty">読み込み中です</td></tr></tbody>
     </table>
   </div>
-  <div class="note">※ 金券台帳の複製確認用です。金券専用Workerの接続確認が済むまでGitHub書き込みは無効です。</div>
+  <div class="note">※ 登録内容は金券台帳専用の保存先で管理します。</div>
 </div>
 <button id="backToTop" class="back-to-top" type="button" aria-label="ページ上部へ戻る">↑</button>
 <div id="endProcessModal" class="end-modal" hidden>
@@ -1341,15 +1344,17 @@ function renderNextPlannedCard(){
 function appendNextPlannedItem(card,x,index){
   const e=x.e,item=document.createElement('div');item.className='next-plan-item';
   if(index>0)item.style.borderTop='1px solid #eceeed';
+  const dateRow=document.createElement('div');dateRow.className='next-plan-item-date-row';
   const date=document.createElement('div');date.className='next-plan-item-date';
   const start=endDayLabel(e.date),end=e.endDate&&e.endDate!==e.date?endDayLabel(e.endDate):'';
   date.textContent=start+(end?'～'+end:'');
-  item.appendChild(date);
-  const head=document.createElement('div');head.className='next-plan-item-head';
+  dateRow.appendChild(date);
   const kinds=document.createElement('span');kinds.className='next-plan-kind-badges';kinds.innerHTML=kindBadgesHtml(e);
+  dateRow.appendChild(kinds);item.appendChild(dateRow);
+  const head=document.createElement('div');head.className='next-plan-item-head';
   const name=document.createElement('div');name.className='next-plan-name';
   if(e.url){const a=document.createElement('a');a.href=e.url;a.target='_blank';a.rel='noopener';a.textContent=e.name;name.appendChild(a);}else{name.textContent=e.name;}
-  head.appendChild(kinds);head.appendChild(name);item.appendChild(head);
+  head.appendChild(name);item.appendChild(head);
   const displayVenue=moneyDisplayVenue(e);
   if(displayVenue){
     const venue=document.createElement('div');venue.className='next-plan-venue';
