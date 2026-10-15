@@ -3,44 +3,6 @@
   "year": 2026,
   "events": [
     {
-      "id": "money-import-2026-025",
-      "date": "",
-      "endDate": "",
-      "dateText": "2026 秋",
-      "name": "JAPAN LEADERS SUMMIT 2026 秋 メール限定キャンペーン",
-      "url": "https://event-page.jp/jls",
-      "venue": "オンライン",
-      "conditionLines": [
-        "媒体：不明",
-        "特典：QUOカードPay 1,000円｜全員",
-        "条件：イベント登録＋キャンペーン応募フォーム。同一会社メール"
-      ],
-      "rating": "",
-      "nightTime": "",
-      "nightText": "区分：過去に確認済み\n日程原文：2026 秋\n形式：オンライン申込\n備考：当日参加・視聴・アンケート条件はメール文面に記載なし。",
-      "attendanceStatus": "",
-      "visitDates": []
-    },
-    {
-      "id": "plithus-game-test-2026-10",
-      "date": "",
-      "endDate": "",
-      "dateText": "2026-10予定",
-      "name": "Plithus オンラインゲームテスト",
-      "url": "https://plithus-game.connpass.com/event/401414/",
-      "venue": "オンライン",
-      "conditionLines": [
-        "媒体：Plithus",
-        "特典：Amazonギフト / Visaギフト 1タイトル4,500円相当・最大18,000円｜条件達成",
-        "条件：対象ゲームジャンル累計プレイ250時間以上等"
-      ],
-      "rating": "",
-      "nightTime": "",
-      "nightText": "区分：現在受付中・要確認\n日程原文：2026-10予定\n形式：オンライン\n受付状況：要確認\n所要時間：不明\n会社メール条件：不明\nSMS認証：不明\n付与時期：不明\n備考：最大4タイトル。通常案件より手間はあるが高額。",
-      "attendanceStatus": "",
-      "visitDates": []
-    },
-    {
       "id": "itmedia-digital-strategy-expo-2026-summer-pending",
       "date": "2026-07-08",
       "endDate": "2026-08-05",
@@ -517,6 +479,28 @@
       "visitDates": []
     },
     {
+      "id": "money-boxil-expo-finance-2026-autumn",
+      "date": "2026-11-11",
+      "endDate": "2026-11-12",
+      "dateText": "11月11日(水)～12日(木)",
+      "name": "BOXIL EXPO 財務・経理展 2026 秋",
+      "url": "https://event-page.jp/boxil_expo/office-2026-autumn",
+      "venue": "オンライン",
+      "conditionLines": [
+        "特典：QUOカードPay 1,000円（参加登録＋応募で全員）",
+        "追加特典：QUOカードPay 1,000円（当日1講演以上視聴で全員）",
+        "条件：財務・経理職種。登録・応募は同じ会社メールで。フリーメール対象外"
+      ],
+      "rating": "",
+      "nightTime": "",
+      "nightText": "付与時期：未確認\n備考：応募フォームは参加登録と別途入力。案内メールと登壇企業公式では11/11～12。主催者総合予定表との日程相違は要確認。",
+      "attendanceStatus": "",
+      "visitDates": [],
+      "_kinds": [
+        "exhibition"
+      ]
+    },
+    {
       "id": "money-security-blaze-2026-amiya-1111",
       "date": "2026-11-11",
       "endDate": "2026-11-12",
@@ -555,6 +539,44 @@
       "rating": "",
       "nightTime": "",
       "nightText": "区分：対象外・低優先\n日程原文：～2026-11-30\n形式：オンライン＋電話\n理由：電話アンケート必須のため低優先。",
+      "attendanceStatus": "",
+      "visitDates": []
+    },
+    {
+      "id": "money-import-2026-025",
+      "date": "",
+      "endDate": "",
+      "dateText": "2026 秋",
+      "name": "JAPAN LEADERS SUMMIT 2026 秋 メール限定キャンペーン",
+      "url": "https://event-page.jp/jls",
+      "venue": "オンライン",
+      "conditionLines": [
+        "媒体：不明",
+        "特典：QUOカードPay 1,000円｜全員",
+        "条件：イベント登録＋キャンペーン応募フォーム。同一会社メール"
+      ],
+      "rating": "",
+      "nightTime": "",
+      "nightText": "区分：過去に確認済み\n日程原文：2026 秋\n形式：オンライン申込\n備考：当日参加・視聴・アンケート条件はメール文面に記載なし。",
+      "attendanceStatus": "",
+      "visitDates": []
+    },
+    {
+      "id": "plithus-game-test-2026-10",
+      "date": "",
+      "endDate": "",
+      "dateText": "2026-10予定",
+      "name": "Plithus オンラインゲームテスト",
+      "url": "https://plithus-game.connpass.com/event/401414/",
+      "venue": "オンライン",
+      "conditionLines": [
+        "媒体：Plithus",
+        "特典：Amazonギフト / Visaギフト 1タイトル4,500円相当・最大18,000円｜条件達成",
+        "条件：対象ゲームジャンル累計プレイ250時間以上等"
+      ],
+      "rating": "",
+      "nightTime": "",
+      "nightText": "区分：現在受付中・要確認\n日程原文：2026-10予定\n形式：オンライン\n受付状況：要確認\n所要時間：不明\n会社メール条件：不明\nSMS認証：不明\n付与時期：不明\n備考：最大4タイトル。通常案件より手間はあるが高額。",
       "attendanceStatus": "",
       "visitDates": []
     }
