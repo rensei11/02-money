@@ -24,7 +24,7 @@ export default {
     }
     if(origin&&origin!==allowed)return json({ok:false,error:'許可されていない送信元です'},403,cors);
     const url=new URL(request.url);
-    if(request.method==='GET'&&url.pathname==='/version')return json({ok:true,version:WORKER_VERSION},200,cors);
+    if(request.method==='GET'&&url.pathname==='/version')return json({ok:true,version:WORKER_VERSION,targetRepository:OWNER+'/'+REPO,ledgerId:LEDGER_ID},200,cors);
     if(request.method!=='POST'||!['/save','/save-v2'].includes(url.pathname))return json({ok:false,error:'Not found'},404,cors);
     if(request.headers.get('X-Ledger-Id')!==LEDGER_ID)return json({ok:false,error:'金券台帳以外の保存要求を拒否しました'},403,cors);
     if(!env.GITHUB_TOKEN||!env.EDIT_KEY)return json({ok:false,error:'Workerの初期設定が未完了です'},500,cors);
