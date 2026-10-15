@@ -1,7 +1,121 @@
 {
-  "dataVersion": "2026-10-15-money-import-29",
+  "dataVersion": "2026-10-15-money-import-28",
   "year": 2026,
   "events": [
+    {
+      "id": "money-import-2026-025",
+      "date": "",
+      "endDate": "",
+      "dateText": "2026 秋",
+      "name": "JAPAN LEADERS SUMMIT 2026 秋 メール限定キャンペーン",
+      "url": "https://event-page.jp/jls",
+      "venue": "オンライン",
+      "conditionLines": [
+        "媒体：不明",
+        "特典：QUOカードPay 1,000円｜全員",
+        "条件：イベント登録＋キャンペーン応募フォーム。同一会社メール"
+      ],
+      "rating": "",
+      "nightTime": "",
+      "nightText": "区分：過去に確認済み\n日程原文：2026 秋\n形式：オンライン申込\n備考：当日参加・視聴・アンケート条件はメール文面に記載なし。",
+      "attendanceStatus": "",
+      "visitDates": []
+    },
+    {
+      "id": "plithus-game-test-2026-10",
+      "date": "",
+      "endDate": "",
+      "dateText": "2026-10予定",
+      "name": "Plithus オンラインゲームテスト",
+      "url": "https://plithus-game.connpass.com/event/401414/",
+      "venue": "オンライン",
+      "conditionLines": [
+        "媒体：Plithus",
+        "特典：Amazonギフト / Visaギフト 1タイトル4,500円相当・最大18,000円｜条件達成",
+        "条件：対象ゲームジャンル累計プレイ250時間以上等"
+      ],
+      "rating": "",
+      "nightTime": "",
+      "nightText": "区分：現在受付中・要確認\n日程原文：2026-10予定\n形式：オンライン\n受付状況：要確認\n所要時間：不明\n会社メール条件：不明\nSMS認証：不明\n付与時期：不明\n備考：最大4タイトル。通常案件より手間はあるが高額。",
+      "attendanceStatus": "",
+      "visitDates": []
+    },
+    {
+      "id": "itmedia-digital-strategy-expo-2026-summer-pending",
+      "date": "2026-07-08",
+      "endDate": "2026-08-05",
+      "dateText": "2026-07-08～2026-08-05",
+      "name": "ITmedia デジタル戦略EXPO 2026 夏",
+      "url": "https://members15.live.itmedia.co.jp/library/MTAyNTcz",
+      "venue": "オンライン",
+      "conditionLines": [
+        "媒体：ITmedia",
+        "特典：Amazonギフトカード500円｜先着キャンペーン",
+        "条件：登録＋会期中ログイン等（キャンペーン別条件）"
+      ],
+      "rating": "",
+      "nightTime": "",
+      "nightText": "区分：未受領ギフト\n日程原文：2026-07-08～2026-08-05\n形式：オンライン\n受領状態：未受領\n付与時期：公式に具体的発送日の記載なし\n備考：ユーザーは条件を満たした認識。2026-09-16時点で未受領。未受領＝対象外とは判断しない。",
+      "attendanceStatus": "",
+      "visitDates": []
+    },
+    {
+      "id": "money-import-2026-021",
+      "date": "2026-07-27",
+      "endDate": "2026-09-07",
+      "dateText": "2026-07-27～2026-09-07",
+      "name": "セールステック・マーケティングDX＆AIカンファレンス 2026 夏 REPLAY",
+      "url": "https://www.sbbit.jp/eventinfo/89783",
+      "venue": "オンライン",
+      "conditionLines": [
+        "媒体：Business+IT",
+        "特典：Amazonギフトカード500円｜全員",
+        "条件：アンケート回答"
+      ],
+      "rating": "",
+      "nightTime": "",
+      "nightText": "区分：過去に確認済み\n日程原文：2026-07-27～2026-09-07\n形式：オンライン / REPLAY\n備考：当初8/27終了予定から9/7まで延長された実績。",
+      "attendanceStatus": "",
+      "visitDates": []
+    },
+    {
+      "id": "money-import-2026-022",
+      "date": "2026-07-29",
+      "endDate": "2026-08-29",
+      "dateText": "2026-07-29～2026-08-29",
+      "name": "ものづくりDX&AIフォーラム 2026 夏 東京 REPLAY",
+      "url": "https://www.sbbit.jp/st/eventinfo/89821",
+      "venue": "オンライン",
+      "conditionLines": [
+        "媒体：Business+IT",
+        "特典：Amazonギフトカード500円｜全員",
+        "条件：アンケート回答"
+      ],
+      "rating": "",
+      "nightTime": "",
+      "nightText": "区分：過去に確認済み\n日程原文：2026-07-29～2026-08-29\n形式：オンライン / REPLAY",
+      "attendanceStatus": "",
+      "visitDates": []
+    },
+    {
+      "id": "money-import-2026-023",
+      "date": "2026-07-29",
+      "endDate": "2026-08-29",
+      "dateText": "2026-07-29～2026-08-29",
+      "name": "金融DX&AIフォーラム 2026 夏 東京 REPLAY",
+      "url": "https://www.sbbit.jp/fj/eventinfo/89873",
+      "venue": "オンライン",
+      "conditionLines": [
+        "媒体：Business+IT",
+        "特典：Amazonギフトカード500円｜全員",
+        "条件：アンケート回答"
+      ],
+      "rating": "",
+      "nightTime": "",
+      "nightText": "区分：過去に確認済み\n日程原文：2026-07-29～2026-08-29\n形式：オンライン / REPLAY",
+      "attendanceStatus": "",
+      "visitDates": []
+    },
     {
       "id": "dxai-online-2026-summer-replay",
       "date": "2026-08-03",
@@ -117,6 +231,25 @@
       "visitDates": []
     },
     {
+      "id": "money-import-2026-020",
+      "date": "2026-09-16",
+      "endDate": "",
+      "dateText": "2026-09-16",
+      "name": "FinTech Journal 金融DX&AI-DAY ＠Industry Forum 2026 秋",
+      "url": "https://www.sbbit.jp/fj/eventinfo/finance-dx-ai-online",
+      "venue": "オンライン",
+      "conditionLines": [
+        "媒体：FinTech Journal",
+        "特典：Amazonギフトカード500円｜全員",
+        "条件：参加＋アンケート"
+      ],
+      "rating": "",
+      "nightTime": "",
+      "nightText": "区分：過去に確認済み\n日程原文：2026-09-16\n形式：オンライン",
+      "attendanceStatus": "",
+      "visitDates": []
+    },
+    {
       "id": "tech-highlights-2026-summer",
       "date": "2026-09-17",
       "endDate": "",
@@ -132,6 +265,25 @@
       "rating": "",
       "nightTime": "",
       "nightText": "区分：現在受付中・要確認\n日程原文：2026-09-17\n形式：オンライン / LIVE\n受付状況：要確認\n所要時間：不明\n会社メール条件：不明\nSMS認証：不明\n付与時期：不明\n備考：必要セッション数・必要視聴時間は公開ページでは不明。",
+      "attendanceStatus": "",
+      "visitDates": []
+    },
+    {
+      "id": "money-import-2026-026",
+      "date": "2026-09-17",
+      "endDate": "",
+      "dateText": "～2026-09-17",
+      "name": "サーモフィッシャー アンケート",
+      "url": "https://e.apto-service.com/strategic3/202609thermo2.html",
+      "venue": "オンライン",
+      "conditionLines": [
+        "媒体：IRMAIL / QMAIL経由で発見",
+        "特典：Amazonギフトカード（金額不明）｜全員と読める案内",
+        "条件：アンケート"
+      ],
+      "rating": "",
+      "nightTime": "",
+      "nightText": "区分：対象外・低優先\n日程原文：～2026-09-17\n形式：オンライン\n理由：実際のフォームで大学・研究機関名、学部・学科・研究室名を要求。通常の民間企業勤務者向けとして適合性不明。",
       "attendanceStatus": "",
       "visitDates": []
     },
@@ -193,6 +345,25 @@
       "visitDates": []
     },
     {
+      "id": "money-import-2026-029",
+      "date": "2026-09-29",
+      "endDate": "",
+      "dateText": "2026-09-29ほか",
+      "name": "みずほIR WEBセミナー系列",
+      "url": "https://j-iris-irm.smktg.jp/",
+      "venue": "オンライン",
+      "conditionLines": [
+        "媒体：みずほインベスター・リレーションズ",
+        "特典：QUOカードPay 500円｜抽選100名",
+        "条件：リアルタイム参加＋当日アンケート等"
+      ],
+      "rating": "",
+      "nightTime": "",
+      "nightText": "区分：対象外・低優先\n日程原文：2026-09-29ほか\n形式：オンライン / LIVE\n理由：抽選のため低優先。",
+      "attendanceStatus": "",
+      "visitDates": []
+    },
+    {
       "id": "freee-reservation-survey-2026",
       "date": "2026-09-30",
       "endDate": "",
@@ -208,6 +379,25 @@
       "rating": "",
       "nightTime": "",
       "nightText": "区分：現在受付中・要確認\n日程原文：～2026-09-30\n形式：オンライン\n受付状況：残枠不明\n所要時間：不明\n会社メール条件：不明\nSMS認証：不明\n付与時期：不明\n備考：別途インタビュー5,000円は面談のため別扱い。",
+      "attendanceStatus": "",
+      "visitDates": []
+    },
+    {
+      "id": "money-import-2026-027",
+      "date": "2026-09-30",
+      "endDate": "",
+      "dateText": "～2026-09-30",
+      "name": "Sony αcafe フォト＆ムービーフェスティバル",
+      "url": "https://cpn.acafe.msc.sony.jp/info/cp/2026summer/index.html?s_pid=ac_acafe_oshirase_2026summer",
+      "venue": "オンライン",
+      "conditionLines": [
+        "媒体：Sony αcafe",
+        "特典：giftee Box 150ポイント｜先着3,500名",
+        "条件：無料入会＋作品1回投稿"
+      ],
+      "rating": "",
+      "nightTime": "",
+      "nightText": "区分：対象外・低優先\n日程原文：～2026-09-30\n形式：オンライン\n理由：大規模先着だが500円未満。",
       "attendanceStatus": "",
       "visitDates": []
     },
@@ -229,6 +419,29 @@
       "nightText": "区分：現在受付中・要確認\n日程原文：2026-10-06 12:00～16:00\n形式：オンライン / LIVE\n受付状況：要確認\n所要時間：最大4時間\n会社メール条件：フリーメール対象外\nSMS認証：不明\n付与時期：不明\n備考：定員700名。",
       "attendanceStatus": "",
       "visitDates": []
+    },
+    {
+      "id": "networld-wiz-2026",
+      "date": "2026-10-16",
+      "endDate": "2026-10-19",
+      "dateText": "2026-10-16 / 2026-10-19",
+      "name": "Networld Wiz 2026",
+      "url": "https://networldwiz.jp/",
+      "venue": "オンライン／オフライン両方",
+      "conditionLines": [
+        "媒体：Networld",
+        "特典：QUOカードPay 500円～最大10,000円｜条件型",
+        "条件：同僚を招待し双方参加など"
+      ],
+      "rating": "",
+      "nightTime": "",
+      "nightText": "区分：現在受付中・要確認\n日程原文：2026-10-16 / 2026-10-19\n形式：オンライン＋オフライン\n受付状況：要確認\n所要時間：不明\n会社メール条件：不明\nSMS認証：不明\n付与時期：不明\n備考：10/16オンライン、10/19東京国際フォーラム。最大20名招待。",
+      "attendanceStatus": "",
+      "visitDates": [],
+      "_kinds": [
+        "exhibition",
+        "gathering"
+      ]
     },
     {
       "id": "backoffice-dxai-online-2026-autumn",
@@ -288,196 +501,6 @@
       "visitDates": []
     },
     {
-      "id": "plithus-game-test-2026-10",
-      "date": "",
-      "endDate": "",
-      "dateText": "2026-10予定",
-      "name": "Plithus オンラインゲームテスト",
-      "url": "https://plithus-game.connpass.com/event/401414/",
-      "venue": "オンライン",
-      "conditionLines": [
-        "媒体：Plithus",
-        "特典：Amazonギフト / Visaギフト 1タイトル4,500円相当・最大18,000円｜条件達成",
-        "条件：対象ゲームジャンル累計プレイ250時間以上等"
-      ],
-      "rating": "",
-      "nightTime": "",
-      "nightText": "区分：現在受付中・要確認\n日程原文：2026-10予定\n形式：オンライン\n受付状況：要確認\n所要時間：不明\n会社メール条件：不明\nSMS認証：不明\n付与時期：不明\n備考：最大4タイトル。通常案件より手間はあるが高額。",
-      "attendanceStatus": "",
-      "visitDates": []
-    },
-    {
-      "id": "itmedia-digital-strategy-expo-2026-summer-pending",
-      "date": "2026-07-08",
-      "endDate": "2026-08-05",
-      "dateText": "2026-07-08～2026-08-05",
-      "name": "ITmedia デジタル戦略EXPO 2026 夏",
-      "url": "https://members15.live.itmedia.co.jp/library/MTAyNTcz",
-      "venue": "オンライン",
-      "conditionLines": [
-        "媒体：ITmedia",
-        "特典：Amazonギフトカード500円｜先着キャンペーン",
-        "条件：登録＋会期中ログイン等（キャンペーン別条件）"
-      ],
-      "rating": "",
-      "nightTime": "",
-      "nightText": "区分：未受領ギフト\n日程原文：2026-07-08～2026-08-05\n形式：オンライン\n受領状態：未受領\n付与時期：公式に具体的発送日の記載なし\n備考：ユーザーは条件を満たした認識。2026-09-16時点で未受領。未受領＝対象外とは判断しない。",
-      "attendanceStatus": "",
-      "visitDates": []
-    },
-    {
-      "id": "money-import-2026-020",
-      "date": "2026-09-16",
-      "endDate": "",
-      "dateText": "2026-09-16",
-      "name": "FinTech Journal 金融DX&AI-DAY ＠Industry Forum 2026 秋",
-      "url": "https://www.sbbit.jp/fj/eventinfo/finance-dx-ai-online",
-      "venue": "オンライン",
-      "conditionLines": [
-        "媒体：FinTech Journal",
-        "特典：Amazonギフトカード500円｜全員",
-        "条件：参加＋アンケート"
-      ],
-      "rating": "",
-      "nightTime": "",
-      "nightText": "区分：過去に確認済み\n日程原文：2026-09-16\n形式：オンライン",
-      "attendanceStatus": "",
-      "visitDates": []
-    },
-    {
-      "id": "money-import-2026-021",
-      "date": "2026-07-27",
-      "endDate": "2026-09-07",
-      "dateText": "2026-07-27～2026-09-07",
-      "name": "セールステック・マーケティングDX＆AIカンファレンス 2026 夏 REPLAY",
-      "url": "https://www.sbbit.jp/eventinfo/89783",
-      "venue": "オンライン",
-      "conditionLines": [
-        "媒体：Business+IT",
-        "特典：Amazonギフトカード500円｜全員",
-        "条件：アンケート回答"
-      ],
-      "rating": "",
-      "nightTime": "",
-      "nightText": "区分：過去に確認済み\n日程原文：2026-07-27～2026-09-07\n形式：オンライン / REPLAY\n備考：当初8/27終了予定から9/7まで延長された実績。",
-      "attendanceStatus": "",
-      "visitDates": []
-    },
-    {
-      "id": "money-import-2026-022",
-      "date": "2026-07-29",
-      "endDate": "2026-08-29",
-      "dateText": "2026-07-29～2026-08-29",
-      "name": "ものづくりDX&AIフォーラム 2026 夏 東京 REPLAY",
-      "url": "https://www.sbbit.jp/st/eventinfo/89821",
-      "venue": "オンライン",
-      "conditionLines": [
-        "媒体：Business+IT",
-        "特典：Amazonギフトカード500円｜全員",
-        "条件：アンケート回答"
-      ],
-      "rating": "",
-      "nightTime": "",
-      "nightText": "区分：過去に確認済み\n日程原文：2026-07-29～2026-08-29\n形式：オンライン / REPLAY",
-      "attendanceStatus": "",
-      "visitDates": []
-    },
-    {
-      "id": "money-import-2026-023",
-      "date": "2026-07-29",
-      "endDate": "2026-08-29",
-      "dateText": "2026-07-29～2026-08-29",
-      "name": "金融DX&AIフォーラム 2026 夏 東京 REPLAY",
-      "url": "https://www.sbbit.jp/fj/eventinfo/89873",
-      "venue": "オンライン",
-      "conditionLines": [
-        "媒体：Business+IT",
-        "特典：Amazonギフトカード500円｜全員",
-        "条件：アンケート回答"
-      ],
-      "rating": "",
-      "nightTime": "",
-      "nightText": "区分：過去に確認済み\n日程原文：2026-07-29～2026-08-29\n形式：オンライン / REPLAY",
-      "attendanceStatus": "",
-      "visitDates": []
-    },
-    {
-      "id": "money-import-2026-024",
-      "date": "",
-      "endDate": "",
-      "dateText": "2026 夏",
-      "name": "Security Week 2026 夏",
-      "url": "https://members05.live.itmedia.co.jp/library/MTA1NjM0?group=2608_SecurityWeek",
-      "venue": "オンライン",
-      "conditionLines": [
-        "媒体：ITmedia",
-        "特典：Amazonギフトカード500円｜全員",
-        "条件：10セッション以上・各10分以上＋各アンケート"
-      ],
-      "rating": "",
-      "nightTime": "",
-      "nightText": "区分：過去に確認済み\n日程原文：2026 夏\n形式：オンライン / LIVE\n備考：手間が大きいためユーザーは見送り。",
-      "attendanceStatus": "",
-      "visitDates": []
-    },
-    {
-      "id": "money-import-2026-025",
-      "date": "",
-      "endDate": "",
-      "dateText": "2026 秋",
-      "name": "JAPAN LEADERS SUMMIT 2026 秋 メール限定キャンペーン",
-      "url": "https://event-page.jp/jls",
-      "venue": "オンライン",
-      "conditionLines": [
-        "媒体：不明",
-        "特典：QUOカードPay 1,000円｜全員",
-        "条件：イベント登録＋キャンペーン応募フォーム。同一会社メール"
-      ],
-      "rating": "",
-      "nightTime": "",
-      "nightText": "区分：過去に確認済み\n日程原文：2026 秋\n形式：オンライン申込\n備考：当日参加・視聴・アンケート条件はメール文面に記載なし。",
-      "attendanceStatus": "",
-      "visitDates": []
-    },
-    {
-      "id": "money-import-2026-026",
-      "date": "2026-09-17",
-      "endDate": "",
-      "dateText": "～2026-09-17",
-      "name": "サーモフィッシャー アンケート",
-      "url": "https://e.apto-service.com/strategic3/202609thermo2.html",
-      "venue": "オンライン",
-      "conditionLines": [
-        "媒体：IRMAIL / QMAIL経由で発見",
-        "特典：Amazonギフトカード（金額不明）｜全員と読める案内",
-        "条件：アンケート"
-      ],
-      "rating": "",
-      "nightTime": "",
-      "nightText": "区分：対象外・低優先\n日程原文：～2026-09-17\n形式：オンライン\n理由：実際のフォームで大学・研究機関名、学部・学科・研究室名を要求。通常の民間企業勤務者向けとして適合性不明。",
-      "attendanceStatus": "",
-      "visitDates": []
-    },
-    {
-      "id": "money-import-2026-027",
-      "date": "2026-09-30",
-      "endDate": "",
-      "dateText": "～2026-09-30",
-      "name": "Sony αcafe フォト＆ムービーフェスティバル",
-      "url": "https://cpn.acafe.msc.sony.jp/info/cp/2026summer/index.html?s_pid=ac_acafe_oshirase_2026summer",
-      "venue": "オンライン",
-      "conditionLines": [
-        "媒体：Sony αcafe",
-        "特典：giftee Box 150ポイント｜先着3,500名",
-        "条件：無料入会＋作品1回投稿"
-      ],
-      "rating": "",
-      "nightTime": "",
-      "nightText": "区分：対象外・低優先\n日程原文：～2026-09-30\n形式：オンライン\n理由：大規模先着だが500円未満。",
-      "attendanceStatus": "",
-      "visitDates": []
-    },
-    {
       "id": "money-import-2026-028",
       "date": "2026-11-30",
       "endDate": "",
@@ -493,25 +516,6 @@
       "rating": "",
       "nightTime": "",
       "nightText": "区分：対象外・低優先\n日程原文：～2026-11-30\n形式：オンライン＋電話\n理由：電話アンケート必須のため低優先。",
-      "attendanceStatus": "",
-      "visitDates": []
-    },
-    {
-      "id": "money-import-2026-029",
-      "date": "2026-09-29",
-      "endDate": "",
-      "dateText": "2026-09-29ほか",
-      "name": "みずほIR WEBセミナー系列",
-      "url": "https://j-iris-irm.smktg.jp/",
-      "venue": "オンライン",
-      "conditionLines": [
-        "媒体：みずほインベスター・リレーションズ",
-        "特典：QUOカードPay 500円｜抽選100名",
-        "条件：リアルタイム参加＋当日アンケート等"
-      ],
-      "rating": "",
-      "nightTime": "",
-      "nightText": "区分：対象外・低優先\n日程原文：2026-09-29ほか\n形式：オンライン / LIVE\n理由：抽選のため低優先。",
       "attendanceStatus": "",
       "visitDates": []
     }
