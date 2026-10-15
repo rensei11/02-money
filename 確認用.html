@@ -149,7 +149,7 @@ const END_DRAFTS_KEY='money_copy_ledger_2026_end_drafts_key_v1';
 const END_BACKUPS_KEY='money_copy_ledger_2026_end_backups_key_v1';
 const END_EDIT_KEY_KEY='money_copy_ledger_2026_end_edit_key_key_v1';
 const EVENT_EDIT_DRAFTS_KEY='money_copy_ledger_2026_event_edit_drafts_key_v1';
-const END_PROCESS_API_URL='';
+const END_PROCESS_API_URL='https://02-money-event-book.aoigiftmiki.workers.dev';
 const MONEY_WORKER_LEDGER_ID='money-only-02';
 async function verifiedMoneySaveUrl(){
   if(!END_PROCESS_API_URL)throw new Error('金券専用の保存先は未設定です。元の台帳には送信しません。');
