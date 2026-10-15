@@ -428,8 +428,12 @@ function compactRangeText(e){
   return left+'～'+right;
 }
 function tableDateRangeHtml(e){
-  if(e.dateText)return esc(e.dateText);
-  if(!/^\d{4}-\d{2}-\d{2}$/.test(String(e.date||'')))return '日程未確定';
+  // 確定日程は元台帳と同じ「月/日(曜日)」表示。移行元のISO文字列をそのまま見せない。
+  if(!/^\d{4}-\d{2}-\d{2}$/.test(String(e.date||''))){
+    const raw=String(e.dateText||'').trim();
+    if(!raw)return '日程未確定';
+    return esc(raw.replace(/^\d{4}-(\d{1,2})予定$/,(_,m)=>Number(m)+'月予定').replace(/^\d{4}\s*(?=[春夏秋冬])/,''));
+  }
   const left=endDayLabel(e.date);
   if(!e.endDate||e.endDate===e.date)return esc(left);
   const right=endDayLabel(e.endDate);
@@ -884,8 +888,13 @@ function participantDisplay(e,editingValue=''){
   }
   return '<div class="participant-line"><span class="participant-label">参加名義：</span>'+esc(people.join(' / '))+'</div>';
 }
+function moneyDisplayVenue(e){
+  const venue=String(e.venue||'').trim();
+  // 区分バッジと同じだけの「オンライン／オフライン」は二重表示しない。実会場名は残す。
+  return /^(?:オンライン|オフライン|オンライン[／/]オフライン両方)$/.test(venue)?'':venue;
+}
 function venueParticipantBlock(e,venueHtml,editingValue=''){
-  return '<div class="venue">'+venueHtml+'</div>'+participantDisplay(e,editingValue);
+  return ((editing||moneyDisplayVenue(e))?'<div class="venue">'+venueHtml+'</div>':'')+participantDisplay(e,editingValue);
 }
 function openEventEdit(eventId='',createMode=false){
   eventEditCreateMode=!!createMode;
@@ -1150,7 +1159,7 @@ function row(e,plannedDate='',showDate=true,rowspan=1,isFirstOfDate=true,planned
   const endButton=(!editing&&canOfficialEnd)?'<button type="button" class="end-row-btn '+(pendingEnd?'end-pending':'end-correction')+'" data-end-edit="'+esc(e.id)+'">'+(pendingEnd?'終了処理':'記録修正')+'</button>':'';
   const actions=eventEditButton(e)+endButton;
   const rightTop=actions?'<div class="event-action-stack">'+actions+'</div>':'';
-  const venueHtml=editing?editableInline(e.id,'venue',e.venue||''):esc(e.venue||'');
+  const venueHtml=editing?editableInline(e.id,'venue',e.venue||''):esc(moneyDisplayVenue(e));
   const eventCellInner='<div class="event-meta-line"><div class="event-badges">'+badges.join('')+'</div>'+rightTop+'</div>'+tools+dayTools+
     '<div class="event-head"><div class="name event-name">'+nameHtml+'</div></div>'+
     venueParticipantBlock(e,venueHtml,personHtml);
@@ -1188,7 +1197,7 @@ function row(e,plannedDate='',showDate=true,rowspan=1,isFirstOfDate=true,planned
 }
 
 function attendedEventInfoBlock(e,schedule=''){
-  const venue=String(e.venue||'').trim();
+  const venue=moneyDisplayVenue(e);
   let html=venue?'<div class="venue">'+esc(venue)+'</div>':'';
   if(schedule)html+=schedule;
   html+=participantDisplay(e);
@@ -1346,10 +1355,13 @@ function appendNextPlannedItem(card,x,index){
   const name=document.createElement('div');name.className='next-plan-name';
   if(e.url){const a=document.createElement('a');a.href=e.url;a.target='_blank';a.rel='noopener';a.textContent=e.name;name.appendChild(a);}else{name.textContent=e.name;}
   head.appendChild(kinds);head.appendChild(name);item.appendChild(head);
-  const venue=document.createElement('div');venue.className='next-plan-venue';
-  const venueLabel=document.createElement('span');venueLabel.className='next-plan-meta-label';venueLabel.textContent='場所：';
-  const venueValue=document.createElement('span');venueValue.className='next-plan-meta-value';venueValue.textContent=e.venue||'—';
-  venue.appendChild(venueLabel);venue.appendChild(venueValue);item.appendChild(venue);
+  const displayVenue=moneyDisplayVenue(e);
+  if(displayVenue){
+    const venue=document.createElement('div');venue.className='next-plan-venue';
+    const venueLabel=document.createElement('span');venueLabel.className='next-plan-meta-label';venueLabel.textContent='場所：';
+    const venueValue=document.createElement('span');venueValue.className='next-plan-meta-value';venueValue.textContent=displayVenue;
+    venue.appendChild(venueLabel);venue.appendChild(venueValue);item.appendChild(venue);
+  }
   const person=document.createElement('div');person.className='next-plan-person';
   const personLabel=document.createElement('span');personLabel.className='next-plan-meta-label';personLabel.textContent='参加名義：';
   const personValue=document.createElement('span');personValue.className='next-plan-meta-value';personValue.textContent=personLines(e).join(' / ');
