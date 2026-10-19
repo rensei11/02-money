@@ -3,6 +3,44 @@
   "year": 2026,
   "events": [
     {
+      "id": "money-import-2026-025",
+      "date": "",
+      "endDate": "",
+      "dateText": "2026 秋",
+      "name": "JAPAN LEADERS SUMMIT 2026 秋 メール限定キャンペーン",
+      "url": "https://event-page.jp/jls",
+      "venue": "オンライン",
+      "conditionLines": [
+        "媒体：不明",
+        "特典：QUOカードPay 1,000円｜全員",
+        "条件：イベント登録＋キャンペーン応募フォーム。同一会社メール"
+      ],
+      "rating": "",
+      "nightTime": "",
+      "nightText": "区分：過去に確認済み\n日程原文：2026 秋\n形式：オンライン申込\n備考：当日参加・視聴・アンケート条件はメール文面に記載なし。",
+      "attendanceStatus": "",
+      "visitDates": []
+    },
+    {
+      "id": "plithus-game-test-2026-10",
+      "date": "",
+      "endDate": "",
+      "dateText": "2026-10予定",
+      "name": "Plithus オンラインゲームテスト",
+      "url": "https://plithus-game.connpass.com/event/401414/",
+      "venue": "オンライン",
+      "conditionLines": [
+        "媒体：Plithus",
+        "特典：Amazonギフト / Visaギフト 1タイトル4,500円相当・最大18,000円｜条件達成",
+        "条件：対象ゲームジャンル累計プレイ250時間以上等"
+      ],
+      "rating": "",
+      "nightTime": "",
+      "nightText": "区分：現在受付中・要確認\n日程原文：2026-10予定\n形式：オンライン\n受付状況：要確認\n所要時間：不明\n会社メール条件：不明\nSMS認証：不明\n付与時期：不明\n備考：最大4タイトル。通常案件より手間はあるが高額。",
+      "attendanceStatus": "",
+      "visitDates": []
+    },
+    {
       "id": "itmedia-digital-strategy-expo-2026-summer-pending",
       "date": "2026-07-08",
       "endDate": "2026-08-05",
@@ -408,7 +446,7 @@
       ],
       "rating": "",
       "nightTime": "",
-      "nightText": "付与時期：不明\n備考：10/16オンライン、10/19東京国際フォーラム。最大20名招待。",
+      "nightText": "4垢でオンラインで視聴　通ればQUOPay3000円分もらえる。\n備考：10/16オンライン、10/19東京国際フォーラム。最大20名招待。",
       "attendanceStatus": "",
       "visitDates": [],
       "_kinds": [
@@ -555,44 +593,6 @@
         "interested": false,
         "ignored": false
       }
-    },
-    {
-      "id": "money-import-2026-025",
-      "date": "",
-      "endDate": "",
-      "dateText": "2026 秋",
-      "name": "JAPAN LEADERS SUMMIT 2026 秋 メール限定キャンペーン",
-      "url": "https://event-page.jp/jls",
-      "venue": "オンライン",
-      "conditionLines": [
-        "媒体：不明",
-        "特典：QUOカードPay 1,000円｜全員",
-        "条件：イベント登録＋キャンペーン応募フォーム。同一会社メール"
-      ],
-      "rating": "",
-      "nightTime": "",
-      "nightText": "区分：過去に確認済み\n日程原文：2026 秋\n形式：オンライン申込\n備考：当日参加・視聴・アンケート条件はメール文面に記載なし。",
-      "attendanceStatus": "",
-      "visitDates": []
-    },
-    {
-      "id": "plithus-game-test-2026-10",
-      "date": "",
-      "endDate": "",
-      "dateText": "2026-10予定",
-      "name": "Plithus オンラインゲームテスト",
-      "url": "https://plithus-game.connpass.com/event/401414/",
-      "venue": "オンライン",
-      "conditionLines": [
-        "媒体：Plithus",
-        "特典：Amazonギフト / Visaギフト 1タイトル4,500円相当・最大18,000円｜条件達成",
-        "条件：対象ゲームジャンル累計プレイ250時間以上等"
-      ],
-      "rating": "",
-      "nightTime": "",
-      "nightText": "区分：現在受付中・要確認\n日程原文：2026-10予定\n形式：オンライン\n受付状況：要確認\n所要時間：不明\n会社メール条件：不明\nSMS認証：不明\n付与時期：不明\n備考：最大4タイトル。通常案件より手間はあるが高額。",
-      "attendanceStatus": "",
-      "visitDates": []
     }
   ]
 }
