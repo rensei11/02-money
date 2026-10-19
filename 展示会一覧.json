@@ -479,7 +479,12 @@
       "visitDates": [],
       "_kinds": [
         "exhibition"
-      ]
+      ],
+      "planning": {
+        "planned": true,
+        "interested": false,
+        "ignored": false
+      }
     },
     {
       "id": "backoffice-dxai-online-2026-autumn",
