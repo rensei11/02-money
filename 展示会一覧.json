@@ -1,5 +1,5 @@
 {
-  "dataVersion": "2026-10-15-web",
+  "dataVersion": "2026-10-19-web",
   "year": 2026,
   "events": [
     {
@@ -373,27 +373,6 @@
       "nightText": "区分：対象外・低優先\n日程原文：～2026-09-30\n形式：オンライン\n理由：大規模先着だが500円未満。",
       "attendanceStatus": "",
       "visitDates": []
-    },
-    {
-      "id": "money-uccard-x-follow-repost-2026",
-      "date": "2026-10-01",
-      "endDate": "2026-11-15",
-      "dateText": "10月1日(木)～11月15日(日)",
-      "name": "UCカードグループ公式X 開設記念キャンペーン",
-      "url": "https://www2.uccard.co.jp/uc/lp/thanks_cmp/present_amazon.html",
-      "venue": "オンライン",
-      "conditionLines": [
-        "特典：Amazonギフトカード1,000円｜抽選250名",
-        "条件：公式Xアカウントをフォローし対象投稿をリポスト。応募から当選通知時まで公開アカウント必須"
-      ],
-      "nightTime": "",
-      "nightText": "付与時期：2026年12月上旬以降の当選DMで送付予定\n備考：応募期限11/15。Xアカウント登録無料。抽選型で全員配布ではない。",
-      "rating": "",
-      "attendanceStatus": "",
-      "visitDates": [],
-      "_kinds": [
-        "exhibition"
-      ]
     },
     {
       "id": "money-shueisha-questionnaire-gift-2026-10",
