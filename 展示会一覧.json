@@ -375,27 +375,6 @@
       "visitDates": []
     },
     {
-      "id": "money-shueisha-questionnaire-gift-2026-10",
-      "date": "2026-10-01",
-      "endDate": "2026-10-31",
-      "dateText": "10月1日(木)～31日(土)",
-      "name": "集英社オンライン 読者アンケート＆プレゼント2026",
-      "url": "https://shueisha.online/articles/-/258432",
-      "venue": "オンライン",
-      "conditionLines": [
-        "特典：Amazonギフトカード2,000円｜抽選100名",
-        "条件：集英社オンライン無料会員登録＋無料ニュースレター登録＋アンケート回答（1人1回）"
-      ],
-      "nightTime": "",
-      "nightText": "付与時期：当選通知メールは2026年12月から順次予定\n備考：応募期限10/31 23:59。抽選型で全員配布ではない。",
-      "rating": "",
-      "attendanceStatus": "",
-      "visitDates": [],
-      "_kinds": [
-        "exhibition"
-      ]
-    },
-    {
       "id": "security-innovation-conference-2026",
       "date": "2026-10-06",
       "endDate": "",
