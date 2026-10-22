@@ -1,5 +1,5 @@
 {
-  "dataVersion": "2026-10-19-web",
+  "dataVersion": "2026-10-22-web",
   "year": 2026,
   "events": [
     {
@@ -527,7 +527,7 @@
     {
       "id": "money-accommodation-dx-2026-1022",
       "date": "2026-10-22",
-      "endDate": "",
+      "endDate": "2026-10-22",
       "dateText": "10月22日(木)",
       "name": "宿泊DXカンファレンス2026",
       "url": "https://proguide.co.jp/accommodationdx/02",
@@ -537,7 +537,7 @@
         "条件：ビジネスメールで登録。10/22 14:00申込締切。アーカイブのみの視聴は特典対象外"
       ],
       "nightTime": "14:00～",
-      "nightText": "付与時期：未確認\n備考：無料Zoom配信。10/23～29のアーカイブは視聴可能だが、金券は当日視聴＋アンケートが必要。",
+      "nightText": "登録はしたがZoom配信なのでやらなかった。というか完全に忘れていた。",
       "rating": "",
       "attendanceStatus": "",
       "visitDates": [],
