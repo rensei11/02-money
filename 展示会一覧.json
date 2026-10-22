@@ -637,6 +637,72 @@
       }
     },
     {
+      "id": "money-sbbit-it-infra-aiops-autumn-20261126",
+      "date": "2026-11-26",
+      "endDate": "",
+      "dateText": "11月26日(木)",
+      "name": "IT Infra & AIOps Conference Online 2026 秋",
+      "url": "https://www.sbbit.jp/eventinfo/it-infra-aiops-online",
+      "venue": "オンライン",
+      "conditionLines": [
+        "媒体：Business+IT",
+        "特典：Amazonギフト券1,000円｜セミナー参加＋受講後アンケート回答の条件達成者全員",
+        "条件：フリーメール・携帯キャリア・プロバイダ等の個人メールアドレスでの申込は特典対象外"
+      ],
+      "rating": "",
+      "nightTime": "13:00～",
+      "nightText": "付与時期：開催終了後最大約4週間以内（公式案内）\n備考：公式ページの申込欄は「お申し込み受付は終了しました」と表示。新規申込可能な状態は確認できていない。",
+      "attendanceStatus": "",
+      "visitDates": [],
+      "_kinds": [
+        "exhibition"
+      ]
+    },
+    {
+      "id": "money-sbbit-dx-ai-online-winter-20261208",
+      "date": "2026-12-08",
+      "endDate": "",
+      "dateText": "12月8日(火)",
+      "name": "DX&AI Forum Online 2026 冬",
+      "url": "https://www.sbbit.jp/eventinfo/dx-ai-online",
+      "venue": "オンライン",
+      "conditionLines": [
+        "媒体：Business+IT",
+        "特典：Amazonギフト券1,000円＋電子書籍｜受講＋アンケート回答の条件達成者全員",
+        "条件：電子書籍の種類は選択できず抽選で決定"
+      ],
+      "rating": "",
+      "nightTime": "13:00～18:10",
+      "nightText": "付与時期：開催終了後最大約4週間以内（公式案内）\n備考：公式ページの申込欄は「お申し込み受付は終了しました」と表示。新規申込可能な状態は確認できていない。",
+      "attendanceStatus": "",
+      "visitDates": [],
+      "_kinds": [
+        "exhibition"
+      ]
+    },
+    {
+      "id": "money-sbbit-security-management-winter-2026121011",
+      "date": "2026-12-10",
+      "endDate": "2026-12-11",
+      "dateText": "12月10日(木)～11日(金)",
+      "name": "セキュリティマネジメントカンファレンス 2026 冬",
+      "url": "https://www.sbbit.jp/eventinfo/security-management-online",
+      "venue": "オンライン",
+      "conditionLines": [
+        "媒体：Business+IT",
+        "特典：Amazonギフト券500円／日、両日受講＋対象アンケート回答で合計1,000円｜条件達成者全員",
+        "条件：フリーメール等の個人アドレスは特典対象外。基調講演・特別講演・事例講演はアンケート対象外"
+      ],
+      "rating": "",
+      "nightTime": "11:00開始",
+      "nightText": "付与時期：開催終了後最大約4週間以内（公式案内）\n備考：公式ページの申込欄は「お申し込み受付は終了しました」と表示。新規申込可能な状態は確認できていない。",
+      "attendanceStatus": "",
+      "visitDates": [],
+      "_kinds": [
+        "exhibition"
+      ]
+    },
+    {
       "id": "money-import-2026-025",
       "date": "",
       "endDate": "",
