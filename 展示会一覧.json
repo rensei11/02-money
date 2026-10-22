@@ -1,44 +1,29 @@
 {
-  "dataVersion": "2026-10-22-web",
+  "dataVersion": "2026-10-22-money-research",
   "year": 2026,
   "events": [
     {
-      "id": "money-import-2026-025",
-      "date": "",
-      "endDate": "",
-      "dateText": "2026 秋",
-      "name": "JAPAN LEADERS SUMMIT 2026 秋 メール限定キャンペーン",
-      "url": "https://event-page.jp/jls",
-      "venue": "オンライン",
+      "id": "money-dpoint-enquete-lottery-202607-12",
+      "date": "2026-07-01",
+      "endDate": "2026-12-31",
+      "dateText": "7月1日(水)～12月31日(木)",
+      "name": "dポイントクラブ 基礎アンケート Amazonギフト抽選",
+      "url": "https://dpoint.docomo.ne.jp/enq/LP/campaign_202607_a/",
       "conditionLines": [
-        "媒体：不明",
-        "特典：QUOカードPay 1,000円｜全員",
-        "条件：イベント登録＋キャンペーン応募フォーム。同一会社メール"
+        "特典：毎月Amazonギフトカード10,000円＋dポイント100pt｜抽選1名",
+        "特典：毎月Amazonギフトカード100円｜抽選999名",
+        "条件：dポイントクラブ会員・キャンペーンにエントリー＋対象の基礎アンケート回答完了",
+        "注意：基礎アンケートにすでに回答済みの人は対象外"
       ],
+      "nightText": "付与時期：毎月末締切、当選連絡は翌月以降\n備考：毎月1000名への抽選。再回答で毎月応募できるという意味ではない。",
+      "venue": "オンライン",
       "rating": "",
       "nightTime": "",
-      "nightText": "区分：過去に確認済み\n日程原文：2026 秋\n形式：オンライン申込\n備考：当日参加・視聴・アンケート条件はメール文面に記載なし。",
       "attendanceStatus": "",
-      "visitDates": []
-    },
-    {
-      "id": "plithus-game-test-2026-10",
-      "date": "",
-      "endDate": "",
-      "dateText": "2026-10予定",
-      "name": "Plithus オンラインゲームテスト",
-      "url": "https://plithus-game.connpass.com/event/401414/",
-      "venue": "オンライン",
-      "conditionLines": [
-        "媒体：Plithus",
-        "特典：Amazonギフト / Visaギフト 1タイトル4,500円相当・最大18,000円｜条件達成",
-        "条件：対象ゲームジャンル累計プレイ250時間以上等"
-      ],
-      "rating": "",
-      "nightTime": "",
-      "nightText": "区分：現在受付中・要確認\n日程原文：2026-10予定\n形式：オンライン\n受付状況：要確認\n所要時間：不明\n会社メール条件：不明\nSMS認証：不明\n付与時期：不明\n備考：最大4タイトル。通常案件より手間はあるが高額。",
-      "attendanceStatus": "",
-      "visitDates": []
+      "visitDates": [],
+      "_kinds": [
+        "exhibition"
+      ]
     },
     {
       "id": "itmedia-digital-strategy-expo-2026-summer-pending",
@@ -413,6 +398,50 @@
       "visitDates": []
     },
     {
+      "id": "money-pointtown-first-ad-202610",
+      "date": "2026-10-01",
+      "endDate": "2026-10-31",
+      "dateText": "10月1日(木)～31日(土)",
+      "name": "ポイントタウン ポイ活デビュー応援キャンペーン",
+      "url": "https://www.pointtown.com/articles/【ポイ活デビュー応援キャンペーン】初めての広告利用でamazonギフトカード500円分もらえる！/",
+      "conditionLines": [
+        "特典：Amazonギフトカード500円｜条件達成者全員",
+        "条件：10月中に新規会員登録＋対象広告を初利用し、11/30までに広告承認",
+        "注意：10月以前の既存会員・ポイント率％表記の広告・11/30までに承認されない広告は対象外"
+      ],
+      "nightText": "付与時期：12月中旬以降順次\n備考：初回広告が承認される必要があり、無料登録だけでは対象外。カード申込など有料・審査を伴う広告もあるため案件ごとの条件を確認。",
+      "venue": "オンライン",
+      "rating": "",
+      "nightTime": "",
+      "attendanceStatus": "",
+      "visitDates": [],
+      "_kinds": [
+        "exhibition"
+      ]
+    },
+    {
+      "id": "money-shikaku-ranking-2027-survey",
+      "date": "2026-10-01",
+      "endDate": "2026-11-09",
+      "dateText": "10月1日(木)～11月9日(月)",
+      "name": "日本の資格・検定 2027年ランキングアンケート",
+      "url": "https://jpsk.jp/mailform/ranking2027.html",
+      "conditionLines": [
+        "特典：Amazonギフトカード5,000円または2,000円｜抽選合計30名",
+        "条件：資格・検定ランキングのアンケート回答（1人1回）",
+        "締切：11月9日12:00"
+      ],
+      "nightText": "付与時期：未確認（当選者にメール送付）\n備考：回答約3分。職業等の質問あり、メルマガ登録は任意。",
+      "venue": "オンライン",
+      "rating": "",
+      "nightTime": "",
+      "attendanceStatus": "",
+      "visitDates": [],
+      "_kinds": [
+        "exhibition"
+      ]
+    },
+    {
       "id": "security-innovation-conference-2026",
       "date": "2026-10-06",
       "endDate": "",
@@ -604,6 +633,44 @@
         "interested": false,
         "ignored": false
       }
+    },
+    {
+      "id": "money-import-2026-025",
+      "date": "",
+      "endDate": "",
+      "dateText": "2026 秋",
+      "name": "JAPAN LEADERS SUMMIT 2026 秋 メール限定キャンペーン",
+      "url": "https://event-page.jp/jls",
+      "venue": "オンライン",
+      "conditionLines": [
+        "媒体：不明",
+        "特典：QUOカードPay 1,000円｜全員",
+        "条件：イベント登録＋キャンペーン応募フォーム。同一会社メール"
+      ],
+      "rating": "",
+      "nightTime": "",
+      "nightText": "区分：過去に確認済み\n日程原文：2026 秋\n形式：オンライン申込\n備考：当日参加・視聴・アンケート条件はメール文面に記載なし。",
+      "attendanceStatus": "",
+      "visitDates": []
+    },
+    {
+      "id": "plithus-game-test-2026-10",
+      "date": "",
+      "endDate": "",
+      "dateText": "2026-10予定",
+      "name": "Plithus オンラインゲームテスト",
+      "url": "https://plithus-game.connpass.com/event/401414/",
+      "venue": "オンライン",
+      "conditionLines": [
+        "媒体：Plithus",
+        "特典：Amazonギフト / Visaギフト 1タイトル4,500円相当・最大18,000円｜条件達成",
+        "条件：対象ゲームジャンル累計プレイ250時間以上等"
+      ],
+      "rating": "",
+      "nightTime": "",
+      "nightText": "区分：現在受付中・要確認\n日程原文：2026-10予定\n形式：オンライン\n受付状況：要確認\n所要時間：不明\n会社メール条件：不明\nSMS認証：不明\n付与時期：不明\n備考：最大4タイトル。通常案件より手間はあるが高額。",
+      "attendanceStatus": "",
+      "visitDates": []
     }
   ]
 }
