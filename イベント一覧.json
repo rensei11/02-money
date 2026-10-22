@@ -73,13 +73,9 @@
         "gathering"
       ],
       "planning": {
-        "planned": false,
-        "interested": true,
-        "ignored": false,
-        "visitDates": [
-          "2026-11-04",
-          "2026-11-05"
-        ]
+        "planned": true,
+        "interested": false,
+        "ignored": false
       }
     },
     {
