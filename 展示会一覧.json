@@ -398,6 +398,29 @@
       "visitDates": []
     },
     {
+      "id": "money-sbbit-security-management-nagoya-replay-202610",
+      "date": "2026-10-01",
+      "endDate": "2026-11-01",
+      "dateText": "2026-10-01～2026-11-01",
+      "name": "Security Management Conference Roadshow 2026 秋 名古屋 REPLAY",
+      "url": "https://www.sbbit.jp/eventinfo/90627",
+      "venue": "オンライン",
+      "conditionLines": [
+        "媒体：Business+IT",
+        "特典：Amazonギフト券500円分｜セミナー参加＋対象講演のアンケート回答で条件達成者全員",
+        "条件：会社メールでの申込が必要。フリーメール・携帯キャリア・プロバイダの個人メールは特典対象外",
+        "注意：基調・特別・事例講演はアンケート対象外。ライブ配信時にアンケート回答済みの人はリプレイでの追加特典対象外"
+      ],
+      "rating": "",
+      "nightTime": "",
+      "nightText": "付与時期：見逃し配信期間終了後、最大約4週間\n備考：公式申込ページは2026年10月24日時点で「お申し込み受付は終了しました」と表示。既登録者が視聴・回答できるかは別途確認が必要。全員進呈は対象条件を満たした申込者についての案内。",
+      "attendanceStatus": "",
+      "visitDates": [],
+      "_kinds": [
+        "exhibition"
+      ]
+    },
+    {
       "id": "money-pointtown-first-ad-202610",
       "date": "2026-10-01",
       "endDate": "2026-10-31",
@@ -435,6 +458,29 @@
       "venue": "オンライン",
       "rating": "",
       "nightTime": "",
+      "attendanceStatus": "",
+      "visitDates": [],
+      "_kinds": [
+        "exhibition"
+      ]
+    },
+    {
+      "id": "money-sbbit-fintech-financial-dx-ai-autumn-replay-202610",
+      "date": "2026-10-05",
+      "endDate": "2026-11-05",
+      "dateText": "2026-10-05～2026-11-05",
+      "name": "FinTech Journal 金融DX&AI-DAY @Industry Forum 2026 秋 REPLAY",
+      "url": "https://www.sbbit.jp/fj/eventinfo/90643",
+      "venue": "オンライン",
+      "conditionLines": [
+        "媒体：Business+IT",
+        "特典：Amazonギフト券500円分｜セミナー参加＋対象講演のアンケート回答で条件達成者全員",
+        "条件：会社メールでの申込が必要。フリーメール・携帯キャリア・プロバイダの個人メールは特典対象外",
+        "注意：基調・特別・事例講演はアンケート対象外。ライブ配信時にアンケート回答済みの人はリプレイでの追加特典対象外"
+      ],
+      "rating": "",
+      "nightTime": "",
+      "nightText": "付与時期：見逃し配信期間終了後、最大約4週間\n備考：公式申込ページは2026年10月24日時点で「お申し込み受付は終了しました」と表示。既登録者が視聴・回答できるかは別途確認が必要。全員進呈は対象条件を満たした申込者についての案内。",
       "attendanceStatus": "",
       "visitDates": [],
       "_kinds": [
