@@ -456,7 +456,12 @@
       "visitDates": [],
       "_kinds": [
         "exhibition"
-      ]
+      ],
+      "planning": {
+        "planned": true,
+        "interested": false,
+        "ignored": false
+      }
     },
     {
       "id": "money-pointtown-first-ad-202610",
