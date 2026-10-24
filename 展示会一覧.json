@@ -1,7 +1,45 @@
 {
-  "dataVersion": "2026-10-22-money-research",
+  "dataVersion": "2026-10-24-web",
   "year": 2026,
   "events": [
+    {
+      "id": "money-import-2026-025",
+      "date": "",
+      "endDate": "",
+      "dateText": "2026 秋",
+      "name": "JAPAN LEADERS SUMMIT 2026 秋 メール限定キャンペーン",
+      "url": "https://event-page.jp/jls",
+      "venue": "オンライン",
+      "conditionLines": [
+        "媒体：不明",
+        "特典：QUOカードPay 1,000円｜全員",
+        "条件：イベント登録＋キャンペーン応募フォーム。同一会社メール"
+      ],
+      "rating": "",
+      "nightTime": "",
+      "nightText": "区分：過去に確認済み\n日程原文：2026 秋\n形式：オンライン申込\n備考：当日参加・視聴・アンケート条件はメール文面に記載なし。",
+      "attendanceStatus": "",
+      "visitDates": []
+    },
+    {
+      "id": "plithus-game-test-2026-10",
+      "date": "",
+      "endDate": "",
+      "dateText": "2026-10予定",
+      "name": "Plithus オンラインゲームテスト",
+      "url": "https://plithus-game.connpass.com/event/401414/",
+      "venue": "オンライン",
+      "conditionLines": [
+        "媒体：Plithus",
+        "特典：Amazonギフト / Visaギフト 1タイトル4,500円相当・最大18,000円｜条件達成",
+        "条件：対象ゲームジャンル累計プレイ250時間以上等"
+      ],
+      "rating": "",
+      "nightTime": "",
+      "nightText": "区分：現在受付中・要確認\n日程原文：2026-10予定\n形式：オンライン\n受付状況：要確認\n所要時間：不明\n会社メール条件：不明\nSMS認証：不明\n付与時期：不明\n備考：最大4タイトル。通常案件より手間はあるが高額。",
+      "attendanceStatus": "",
+      "visitDates": []
+    },
     {
       "id": "money-dpoint-enquete-lottery-202607-12",
       "date": "2026-07-01",
@@ -401,7 +439,7 @@
       "id": "money-sbbit-security-management-nagoya-replay-202610",
       "date": "2026-10-01",
       "endDate": "2026-11-01",
-      "dateText": "2026-10-01～2026-11-01",
+      "dateText": "10月1日(木)～11月1日(日)",
       "name": "Security Management Conference Roadshow 2026 秋 名古屋 REPLAY",
       "url": "https://www.sbbit.jp/eventinfo/90627",
       "venue": "オンライン",
@@ -413,7 +451,7 @@
       ],
       "rating": "",
       "nightTime": "",
-      "nightText": "付与時期：見逃し配信期間終了後、最大約4週間\n備考：公式申込ページは2026年10月24日時点で「お申し込み受付は終了しました」と表示。既登録者が視聴・回答できるかは別途確認が必要。全員進呈は対象条件を満たした申込者についての案内。",
+      "nightText": "付与時期：見逃し配信期間終了後、最大約4週間\n\n杉浦 直樹　218.148.204.127　アンケ済\n川島 和也　222.5.66.192",
       "attendanceStatus": "",
       "visitDates": [],
       "_kinds": [
@@ -747,44 +785,6 @@
       "_kinds": [
         "exhibition"
       ]
-    },
-    {
-      "id": "money-import-2026-025",
-      "date": "",
-      "endDate": "",
-      "dateText": "2026 秋",
-      "name": "JAPAN LEADERS SUMMIT 2026 秋 メール限定キャンペーン",
-      "url": "https://event-page.jp/jls",
-      "venue": "オンライン",
-      "conditionLines": [
-        "媒体：不明",
-        "特典：QUOカードPay 1,000円｜全員",
-        "条件：イベント登録＋キャンペーン応募フォーム。同一会社メール"
-      ],
-      "rating": "",
-      "nightTime": "",
-      "nightText": "区分：過去に確認済み\n日程原文：2026 秋\n形式：オンライン申込\n備考：当日参加・視聴・アンケート条件はメール文面に記載なし。",
-      "attendanceStatus": "",
-      "visitDates": []
-    },
-    {
-      "id": "plithus-game-test-2026-10",
-      "date": "",
-      "endDate": "",
-      "dateText": "2026-10予定",
-      "name": "Plithus オンラインゲームテスト",
-      "url": "https://plithus-game.connpass.com/event/401414/",
-      "venue": "オンライン",
-      "conditionLines": [
-        "媒体：Plithus",
-        "特典：Amazonギフト / Visaギフト 1タイトル4,500円相当・最大18,000円｜条件達成",
-        "条件：対象ゲームジャンル累計プレイ250時間以上等"
-      ],
-      "rating": "",
-      "nightTime": "",
-      "nightText": "区分：現在受付中・要確認\n日程原文：2026-10予定\n形式：オンライン\n受付状況：要確認\n所要時間：不明\n会社メール条件：不明\nSMS認証：不明\n付与時期：不明\n備考：最大4タイトル。通常案件より手間はあるが高額。",
-      "attendanceStatus": "",
-      "visitDates": []
     }
   ]
 }
