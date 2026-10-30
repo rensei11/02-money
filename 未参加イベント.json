@@ -14,6 +14,19 @@
       "attendanceStatus": "not_attended",
       "visitDates": [],
       "nameCodes": []
+    },
+    {
+      "id": "money-accommodation-dx-2026-1022",
+      "date": "2026-10-22",
+      "endDate": "2026-10-22",
+      "dateText": "10月22日(木)",
+      "name": "宿泊DXカンファレンス2026",
+      "url": "https://proguide.co.jp/accommodationdx/02",
+      "venue": "オンライン",
+      "category": "exhibition",
+      "attendanceStatus": "not_attended",
+      "visitDates": [],
+      "nameCodes": []
     }
   ]
 }

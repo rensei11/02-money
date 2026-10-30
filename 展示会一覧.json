@@ -613,7 +613,7 @@
       "nightTime": "14:00～",
       "nightText": "登録はしたがZoom配信なのでやらなかった。というか完全に忘れていた。",
       "rating": "",
-      "attendanceStatus": "",
+      "attendanceStatus": "not_attended",
       "visitDates": [],
       "_kinds": [
         "exhibition"
@@ -622,7 +622,8 @@
         "planned": true,
         "interested": false,
         "ignored": false
-      }
+      },
+      "historySource": "終了処理"
     },
     {
       "id": "money-boxil-expo-finance-2026-autumn",
