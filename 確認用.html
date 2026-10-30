@@ -296,7 +296,7 @@ async function getGitHubEditKey(force=false){
 }
 async function apiSaveNow(payload){
   let key=await getGitHubEditKey(false);
-  let retriedKey=false,retriedGitHub500=false;
+  let retriedKey=false,gitHub500Retries=0;
   const safeRetryActions=['event_upsert','planning_state','report_flag'];
   for(;;){
     const rr=await fetch(await verifiedMoneySaveUrl(),{method:'POST',headers:{'Content-Type':'application/json','X-Edit-Key':key,'X-Ledger-Id':MONEY_WORKER_LEDGER_ID},body:JSON.stringify(payload)});
@@ -308,13 +308,13 @@ async function apiSaveNow(payload){
     }
     if(!rr.ok||!result.ok){
       const error=String(result.error||'GitHubへの保存に失敗しました');
-      if(rr.status===500&&error==='GitHub API error 500'&&!retriedGitHub500&&safeRetryActions.includes(payload.action)){
-        retriedGitHub500=true;
-        await new Promise(resolve=>setTimeout(resolve,1100));
+      if(rr.status===500&&error==='GitHub API error 500'&&gitHub500Retries<2&&safeRetryActions.includes(payload.action)){
+        gitHub500Retries++;
+        await new Promise(resolve=>setTimeout(resolve,gitHub500Retries===1?1100:3200));
         continue;
       }
       if(error==='GitHub API error 500'){
-        throw new Error('GitHub側のエラー（500）で保存できませんでした。入力内容は残っています。時間をおいて再保存してください。');
+        throw new Error('GitHub側の一時エラー（500）で保存できませんでした。画面を閉じず、上部の未送信から再保存できます。');
       }
       throw new Error(error);
     }
@@ -1098,6 +1098,13 @@ async function saveEventEditToGitHub(){
     closeEventEdit();
     render();
   }catch(err){
+    // New events do not have an existing record to fall back on: keep the
+    // complete unsent form in the same local draft queue as edited events.
+    if(eventEditCreateMode){
+      eventEditDrafts[d.eventId]=d;
+      localStorage.setItem(EVENT_EDIT_DRAFTS_KEY,JSON.stringify(eventEditDrafts));
+      refreshGitHubSaveButton();
+    }
     if(status)status.textContent=err.message||String(err);
     setGitHubSaveState(err.message||String(err),true);
   }finally{
