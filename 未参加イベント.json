@@ -1,5 +1,19 @@
 {
-  "dataVersion": "2026-10-26-web",
+  "dataVersion": "2026-10-30-web",
   "year": 2026,
-  "events": []
+  "events": [
+    {
+      "id": "money-retail-service-future-conference-2026",
+      "date": "2026-10-20",
+      "endDate": "2026-10-21",
+      "dateText": "10月20日(火)～10月21日(水)",
+      "name": "小売・サービスの未来会議 2026",
+      "url": "https://www.staff-start.com/lp/vs_Summit_2026.html",
+      "venue": "オンライン",
+      "category": "exhibition",
+      "attendanceStatus": "not_attended",
+      "visitDates": [],
+      "nameCodes": []
+    }
+  ]
 }

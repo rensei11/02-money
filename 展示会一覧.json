@@ -1,5 +1,5 @@
 {
-  "dataVersion": "2026-10-28-web",
+  "dataVersion": "2026-10-30-web",
   "year": 2026,
   "events": [
     {
@@ -543,13 +543,12 @@
       "venue": "オンライン",
       "conditionLines": [
         "特典：Amazonギフト券2,000円｜抽選30名",
-        "条件：事前参加申込＋10/20または10/21の当日視聴。両日とも1回の申込で参加可",
-        "名前コード：伊藤 聡"
+        "条件：事前参加申込＋10/20または10/21の当日視聴。両日とも1回の申込で参加可"
       ],
       "nightTime": "10/20 11:00～16:15・10/21 11:00～15:30",
       "nightText": "付与時期：当選者への発送時期は未確認\n備考：無料イベント。全員進呈ではなく抽選30名。",
       "rating": "",
-      "attendanceStatus": "",
+      "attendanceStatus": "not_attended",
       "visitDates": [],
       "_kinds": [
         "exhibition"
@@ -558,7 +557,8 @@
         "planned": true,
         "interested": false,
         "ignored": false
-      }
+      },
+      "historySource": "終了処理"
     },
     {
       "id": "backoffice-dxai-online-2026-autumn",
