@@ -1,0 +1,25 @@
+name: Diagnose stuck Pages deployment 20261101
+on:
+  push:
+    paths:
+      - .github/workflows/diagnose-pages-lock-20261101.yml
+permissions:
+  contents: read
+  deployments: read
+  pages: read
+jobs:
+  inspect:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Find the old deployment and its status
+        env:
+          GH_TOKEN: ${{ github.token }}
+          GH_REPO: ${{ github.repository }}
+        run: |
+          echo "DEPLOYMENTS"
+          gh api "repos/$GH_REPO/deployments?per_page=100" --jq '.[] | {id, sha, environment, created_at, updated_at}'
+          echo "MATCHING_DEPLOYMENTS"
+          gh api "repos/$GH_REPO/deployments?per_page=100" --jq '.[] | select(.sha == "c679219ae2a1a7fa670ed6ed241fa473cb9b7808") | {id, sha, environment, statuses_url}'
+          echo "PAGES"
+          gh api "repos/$GH_REPO/pages" --jq '{status, build_type, html_url, source}' || true
