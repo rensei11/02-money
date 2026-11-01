@@ -1205,7 +1205,8 @@ function row(e,plannedDate='',showDate=true,rowspan=1,isFirstOfDate=true,planned
     }
   }else{
     if(!r && e.rating)detail+=preRatingHtml(e.rating);
-    if(e.nightTime||e.nightText)detail+='<div class="event-detail-text">'+esc([e.nightTime,e.nightText].filter(Boolean).join('　'))+'</div>';
+    if(e.nightTime)detail+='<div class="event-detail-time">'+esc(e.nightTime)+'</div>';
+    if(e.nightText)detail+='<div class="event-detail-text">'+esc(e.nightText)+'</div>';
     if(r){
       detail+='<div class="report-rating-line"><div class="rating">'+reportRatingHtml(r.rating)+'</div>'+reportFlagTools(r)+'</div>';
       detail+='<div class="report">'+esc(r.report||'')+'</div>';
