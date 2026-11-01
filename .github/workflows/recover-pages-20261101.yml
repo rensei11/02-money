@@ -1,0 +1,21 @@
+name: One-time recovery of a stuck Pages deployment
+on:
+  push:
+    paths:
+      - .github/workflows/recover-pages-20261101.yml
+
+permissions:
+  contents: read
+  pages: write
+
+jobs:
+  cancel-stale-pages-deployment:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Cancel the deployment explicitly identified by the Pages error
+        env:
+          GH_TOKEN: ${{ github.token }}
+          GH_REPO: ${{ github.repository }}
+        run: |
+          gh api -X POST "repos/$GH_REPO/pages/deployments/c679219ae2a1a7fa670ed6ed241fa473cb9b7808/cancel"
