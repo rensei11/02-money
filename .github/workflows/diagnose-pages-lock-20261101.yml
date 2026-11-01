@@ -12,6 +12,10 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 5
     steps:
+      - name: Confirm the live site actually serves the corrected code
+        run: |
+          curl --fail --location --silent --show-error --retry 3 "https://rensei11.github.io/02-money/%E7%A2%BA%E8%AA%8D%E7%94%A8.html" -o "$RUNNER_TEMP/live.html"
+          python3 -c 'import pathlib,os; s=pathlib.Path(os.environ["RUNNER_TEMP"],"live.html").read_text(encoding="utf-8"); assert "if(e.nightTime)detail+=" in s and "if(e.nightText)detail+=" in s and ".event-detail-text{white-space:pre-wrap;overflow-wrap:anywhere}" in s; print("LIVE_HTML_FIX_PRESENT")'
       - name: Find the old deployment and its status
         env:
           GH_TOKEN: ${{ github.token }}
