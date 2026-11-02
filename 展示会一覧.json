@@ -1,5 +1,5 @@
 {
-  "dataVersion": "2026-11-01-web",
+  "dataVersion": "2026-11-02-web",
   "year": 2026,
   "events": [
     {
@@ -572,8 +572,12 @@
       "rating": "",
       "nightTime": "",
       "nightText": "区分：現在受付中・要確認\n日程原文：2026-10-21～2026-10-27\n形式：オンライン / 後日受講\n受付状況：要確認\n所要時間：不明\n会社メール条件：不明\nSMS認証：不明\n付与時期：不明\n備考：オンライン定員500名。会場開催は10/14。",
-      "attendanceStatus": "",
-      "visitDates": []
+      "attendanceStatus": "attended",
+      "visitDates": [
+        "2026-10-27"
+      ],
+      "historySource": "終了処理",
+      "sourceReportId": "rep-web-legal-dx-ai-summit-2026"
     },
     {
       "id": "money-accommodation-dx-2026-1022",

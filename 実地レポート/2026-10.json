@@ -1,5 +1,24 @@
 {
   "year": 2026,
   "month": 10,
-  "reports": []
+  "reports": [
+    {
+      "id": "rep-web-legal-dx-ai-summit-2026",
+      "date": "2026-10-27",
+      "visitDates": [
+        "2026-10-27"
+      ],
+      "dateText": "10/27",
+      "scheduledDate": "2026-10-21",
+      "scheduledEndDate": "2026-10-27",
+      "scheduledDateText": "2026-10-21～2026-10-27",
+      "name": "法務DX・AI変革サミット2026",
+      "url": "https://businessandlaw.jp/seminar/20261014dx/",
+      "venue": "オンライン",
+      "rating": "",
+      "category": "exhibition",
+      "report": "イマイチやり方が分かっていなかったが1名分で来ていたようで500円分が送られてきた。11月2日なので、送付が終わってからわずか1週間後とかなり早い。",
+      "source": "終了処理"
+    }
+  ]
 }
