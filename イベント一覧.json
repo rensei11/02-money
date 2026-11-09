@@ -139,6 +139,30 @@
       }
     },
     {
+      "id": "money-iprosai-industryworld-2026-networking",
+      "date": "2026-12-09",
+      "endDate": "2026-12-10",
+      "dateText": "12月9日(水)～10日(木)",
+      "name": "イプロスAI 産業World 2026 異業種大交流会",
+      "url": "https://ex.ipros.jp/expo/iprosai-2026-12/networking-event/",
+      "venue": "東京国際フォーラム（イプロスAI 産業World会場内）",
+      "conditionLines": [
+        "特典：東京国際フォーラムのショップ・レストランで使える1,000円分の館内チケット｜交流会の参加者全員。",
+        "条件：展示会の来場登録（無料）後、交流会のDAY1またはDAY2を別途申込。交流会の受付で来場証を提示。",
+        "注意：館内チケットは当日受付で配布。利用期限は催事終了日まで。複数日参加での重複進呈は公式で未確認。",
+        "展示会本体のAmazonギフトカード特典（来場登録コード／紹介／ブース予約）とは別の参加特典。併用可否は未確認。",
+        "公式案内：https://ex.ipros.jp/expo/iprosai-2026-12/networking-event/"
+      ],
+      "rating": "",
+      "nightTime": "12/9(水) 17:15～18:15／12/10(木) 15:00～16:00",
+      "nightText": "付与時期：参加当日、交流会の受付時。\n備考：展示会本体とは別に交流会参加登録が必要。東京国際フォーラム館内での利用に限定。料理・ドリンクの無料提供は公式で確認できていない。",
+      "attendanceStatus": "",
+      "visitDates": [],
+      "_kinds": [
+        "gathering"
+      ]
+    },
+    {
       "id": "evt-iprosai-2027-winter-0127",
       "date": "2027-01-27",
       "endDate": "2027-01-29",
