@@ -3,44 +3,6 @@
   "year": 2026,
   "events": [
     {
-      "id": "money-import-2026-025",
-      "date": "",
-      "endDate": "",
-      "dateText": "2026 秋",
-      "name": "JAPAN LEADERS SUMMIT 2026 秋 メール限定キャンペーン",
-      "url": "https://event-page.jp/jls",
-      "venue": "オンライン",
-      "conditionLines": [
-        "媒体：不明",
-        "特典：QUOカードPay 1,000円｜全員",
-        "条件：イベント登録＋キャンペーン応募フォーム。同一会社メール"
-      ],
-      "rating": "",
-      "nightTime": "",
-      "nightText": "区分：過去に確認済み\n日程原文：2026 秋\n形式：オンライン申込\n備考：当日参加・視聴・アンケート条件はメール文面に記載なし。",
-      "attendanceStatus": "",
-      "visitDates": []
-    },
-    {
-      "id": "plithus-game-test-2026-10",
-      "date": "",
-      "endDate": "",
-      "dateText": "2026-10予定",
-      "name": "Plithus オンラインゲームテスト",
-      "url": "https://plithus-game.connpass.com/event/401414/",
-      "venue": "オンライン",
-      "conditionLines": [
-        "媒体：Plithus",
-        "特典：Amazonギフト / Visaギフト 1タイトル4,500円相当・最大18,000円｜条件達成",
-        "条件：対象ゲームジャンル累計プレイ250時間以上等"
-      ],
-      "rating": "",
-      "nightTime": "",
-      "nightText": "区分：現在受付中・要確認\n日程原文：2026-10予定\n形式：オンライン\n受付状況：要確認\n所要時間：不明\n会社メール条件：不明\nSMS認証：不明\n付与時期：不明\n備考：最大4タイトル。通常案件より手間はあるが高額。",
-      "attendanceStatus": "",
-      "visitDates": []
-    },
-    {
       "id": "itmedia-digital-strategy-expo-2026-summer-pending",
       "date": "2026-07-08",
       "endDate": "2026-08-05",
@@ -607,6 +569,52 @@
       "historySource": "終了処理"
     },
     {
+      "id": "money-tokubai-black-friday-pre-20261106",
+      "date": "2026-11-06",
+      "endDate": "2026-11-19",
+      "dateText": "11月6日(金)～19日(木)",
+      "name": "トクバイ ブラックフライデー前夜祭 デジタルギフト抽選",
+      "url": "https://entry.tokubai.co.jp/black_friday_pre_2026",
+      "venue": "オンライン（スマートフォンアプリから応募）",
+      "conditionLines": [
+        "抽選：選べるデジタルギフト2,500円分｜100名。",
+        "条件：無料トクバイアプリを利用→アプリ内のキャンペーンページから応募フォームを開く→必要事項入力・送信。",
+        "応募期限：2026年11月19日(木)23:59。新規利用者限定との条件は公式に見当たらない。"
+      ],
+      "rating": "",
+      "nightTime": "",
+      "nightText": "付与時期：当選通知・特典送付は2026年11月20日頃。\n備考：無料応募の抽選案件。アプリ内から応募が必要で、通常のWebページを見るだけでは応募完了しない。",
+      "attendanceStatus": "",
+      "visitDates": [],
+      "_kinds": [
+        "exhibition"
+      ]
+    },
+    {
+      "id": "money-manegy-lunchstudy-autumn-20261109",
+      "date": "2026-11-09",
+      "endDate": "2026-11-13",
+      "dateText": "11月9日(月)～13日(金)",
+      "name": "ManegyランスタWEEK 2026 Autumn",
+      "url": "https://www.manegy.com/lunchstudy/event2026_24/",
+      "venue": "オンライン",
+      "conditionLines": [
+        "特典：Amazonギフトカード500円／対象企業1社のセッション視聴＋対象アンケート回答。最大6社で3,000円（対象講演・対象回答に限る）。",
+        "抽選：対象の業務・DX資料をダウンロードするとAmazonギフトカード最大10,000円、合計136本の当たり。",
+        "追加：イベント申込者限定、公式アプリManegy Clipの導入で先着100人に5,000マネジーポイント（Amazonギフトではない）。",
+        "条件：無料の会員登録・イベント申込が必要。未視聴のままアンケート回答しても対象外。",
+        "特典の詳細：https://www.manegy.com/news/detail/17660/"
+      ],
+      "rating": "",
+      "nightTime": "11/9～13 各日12:05～13:30頃（講演ごとに異なる）",
+      "nightText": "付与時期：Amazonギフト送付日は公式で確認できていない。\n備考：管理部門向けのオンライン昼セミナー。特典対象セッションを選び、視聴後に対象アンケートへ回答。最大13,000円の表記は抽選上限の10,000円を含むため全員に13,000円ではない。",
+      "attendanceStatus": "",
+      "visitDates": [],
+      "_kinds": [
+        "exhibition"
+      ]
+    },
+    {
       "id": "money-boxil-expo-finance-2026-autumn",
       "date": "2026-11-11",
       "endDate": "2026-11-12",
@@ -728,6 +736,44 @@
       "_kinds": [
         "exhibition"
       ]
+    },
+    {
+      "id": "money-import-2026-025",
+      "date": "",
+      "endDate": "",
+      "dateText": "2026 秋",
+      "name": "JAPAN LEADERS SUMMIT 2026 秋 メール限定キャンペーン",
+      "url": "https://event-page.jp/jls",
+      "venue": "オンライン",
+      "conditionLines": [
+        "媒体：不明",
+        "特典：QUOカードPay 1,000円｜全員",
+        "条件：イベント登録＋キャンペーン応募フォーム。同一会社メール"
+      ],
+      "rating": "",
+      "nightTime": "",
+      "nightText": "区分：過去に確認済み\n日程原文：2026 秋\n形式：オンライン申込\n備考：当日参加・視聴・アンケート条件はメール文面に記載なし。",
+      "attendanceStatus": "",
+      "visitDates": []
+    },
+    {
+      "id": "plithus-game-test-2026-10",
+      "date": "",
+      "endDate": "",
+      "dateText": "2026-10予定",
+      "name": "Plithus オンラインゲームテスト",
+      "url": "https://plithus-game.connpass.com/event/401414/",
+      "venue": "オンライン",
+      "conditionLines": [
+        "媒体：Plithus",
+        "特典：Amazonギフト / Visaギフト 1タイトル4,500円相当・最大18,000円｜条件達成",
+        "条件：対象ゲームジャンル累計プレイ250時間以上等"
+      ],
+      "rating": "",
+      "nightTime": "",
+      "nightText": "区分：現在受付中・要確認\n日程原文：2026-10予定\n形式：オンライン\n受付状況：要確認\n所要時間：不明\n会社メール条件：不明\nSMS認証：不明\n付与時期：不明\n備考：最大4タイトル。通常案件より手間はあるが高額。",
+      "attendanceStatus": "",
+      "visitDates": []
     }
   ]
 }
