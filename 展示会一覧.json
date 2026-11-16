@@ -1,5 +1,5 @@
 {
-  "dataVersion": "2026-11-15-web",
+  "dataVersion": "2026-11-16-web",
   "year": 2026,
   "events": [
     {
@@ -153,29 +153,6 @@
       "nightText": "区分：現在受付中・要確認\n日程原文：2026-08-10～先着到達まで\n形式：オンライン\n受付状況：要再確認\n所要時間：約15分\n会社メール条件：不明\nSMS認証：不明\n付与時期：不明\n備考：公式ページ上の終了告知は未確認。残枠は不明。",
       "attendanceStatus": "",
       "visitDates": []
-    },
-    {
-      "id": "money-20261109-research-techtarget-salesforce-test",
-      "date": "2026-08-20",
-      "endDate": "2026-11-19",
-      "dateText": "08/20～11/19（応募期間・締切）",
-      "name": "TechTarget アンケート「Salesforceテスト自動化」 Amazon3000円抽選",
-      "url": "https://techtarget.itmedia.co.jp/tt/article/2608/20/226082003/",
-      "venue": "オンライン（無料応募）",
-      "conditionLines": [
-        "抽選：Amazonギフトカード3,000円分×10名。抽選であり回答者全員には配布されない。",
-        "条件：TechTargetジャパン（アイティメディア）の無料会員登録・ログイン後、対象のアンケートに回答。関連する業務・製品利用状況を正確に回答すること。",
-        "回答締切：2026/11/19。規定回答数に達すると期限前終了の場合あり。公式ページの応募ボタンが無ければ応募できない。",
-        "アンケート協力企業：コパード株式会社。"
-      ],
-      "rating": "",
-      "nightTime": "",
-      "nightText": "付与時期：当選者への送付日未確認。\n備考：上限人数は各案件の記載。同じ媒体で実施される重複アンケートは同一応募として扱われる場合がある。専門業種向けの場合、実際の対象資格を応募画面で確認。",
-      "attendanceStatus": "",
-      "visitDates": [],
-      "_kinds": [
-        "exhibition"
-      ]
     },
     {
       "id": "ai-manufacturing-dx-replay-2026",
