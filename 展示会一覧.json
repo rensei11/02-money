@@ -949,7 +949,12 @@
       "visitDates": [],
       "_kinds": [
         "exhibition"
-      ]
+      ],
+      "planning": {
+        "planned": false,
+        "interested": true,
+        "ignored": false
+      }
     },
     {
       "id": "money-boxil-expo-finance-2026-autumn",
