@@ -1,5 +1,5 @@
 {
-  "dataVersion": "2026-11-16-web",
+  "dataVersion": "2026-11-17-web",
   "year": 2026,
   "events": [
     {
@@ -508,29 +508,6 @@
         "interested": false,
         "ignored": false
       }
-    },
-    {
-      "id": "money-20261109-research-techtarget-nttdata-ai-usage",
-      "date": "2026-10-02",
-      "endDate": "2026-12-01",
-      "dateText": "10/02～12/01（応募期間・締切）",
-      "name": "TechTarget アンケート「データ活用とAI活用の実態」 Amazon3000円抽選",
-      "url": "https://techtarget.itmedia.co.jp/tt/article/2610/02/2000001715/",
-      "venue": "オンライン（無料応募）",
-      "conditionLines": [
-        "抽選：Amazonギフトカード3,000円分×10名。抽選であり回答者全員には配布されない。",
-        "条件：TechTargetジャパン（アイティメディア）の無料会員登録・ログイン後、対象のアンケートに回答。関連する業務・製品利用状況を正確に回答すること。",
-        "回答締切：2026/12/01。規定回答数に達すると期限前終了の場合あり。公式ページの応募ボタンが無ければ応募できない。",
-        "アンケート協力企業：NTTデータ。"
-      ],
-      "rating": "",
-      "nightTime": "",
-      "nightText": "付与時期：当選者への送付日未確認。\n備考：上限人数は各案件の記載。同じ媒体で実施される重複アンケートは同一応募として扱われる場合がある。専門業種向けの場合、実際の対象資格を応募画面で確認。",
-      "attendanceStatus": "",
-      "visitDates": [],
-      "_kinds": [
-        "exhibition"
-      ]
     },
     {
       "id": "money-sbbit-fintech-financial-dx-ai-autumn-replay-202610",
